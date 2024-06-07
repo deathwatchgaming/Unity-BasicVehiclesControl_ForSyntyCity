@@ -1,0 +1,21 @@
+Let's put dev/demo scenes here as this will make sense when docs are written for setup instructions for either the vehicle controller only usage and if then desired, the vehicle entry additions to such....
+
+ie:
+
+AllVehiclesDevScene-wEntry.unity   (to test/dev & continue on with all vehicles in one scene with entry)
+AmbulanceDevScene.unity            (to test/dev & continue on with Ambulance only in scene)
+AmbulanceDevScene-wEntry.unity     (to test/dev & continue on with Ambulance only in scene with entry)
+PoliceCruiserDevScene.unity        (to test/dev & continue on with PoliceCruiser only in scene)
+PoliceCruiserDevScene-wEntry.unity (to test/dev & continue on with PoliceCruiser only in scene with entry)
+TaxiScene.unity                    (to test/dev & continue on with Taxi only in scene)
+TaxiDevScene-wEntry.unity          (to test/dev & continue on with Taxi only in scene with entry)
+SedanLargeDevScene.unity           (to test/dev & continue on with SedanLarge only in scene)
+SedanLargeDevScene-wEntry.unity    (to test/dev & continue on with SedanLarge only in scene with entry)
+SedanMediumDevScene.unity          (to test/dev & continue on with SedanMedium only in scene)
+SedanMediumDevScene-wEntry.unity   (to test/dev & continue on with SedanMedium only in scene with entry)
+SedanSmallDevScene.unity           (to test/dev & continue on with SedanSmall only in scene)
+SedanSmallDevScene-wEntry.unity    (to test/dev & continue on with SedanSmall only in scene with entry)
+VanDevScene.unity                  (to test/dev & continue on with Van only in scene)
+VanDevScene-wEntry.unity           (to test/dev & continue on with Van only in scene with entry)
+MuscleCarDevScene.unity            (to test/dev & continue on with MuscleCar only in scene)
+MuscleCarDevScene-wEntry.unity     (to test/dev & continue on with MuscleCar only in scene with entry)
