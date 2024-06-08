@@ -21,7 +21,7 @@ Vehicles Currently "Completed" & Included:
 
 * Ambulance (100% completed)
 * PoliceCruiser (100% completed)
-* Van (50% completed)
+* Van (100% completed)
 * Taxi (100% completed)
 * MuscleCar (100% completed)
 * SedanLarge (100% completed)
