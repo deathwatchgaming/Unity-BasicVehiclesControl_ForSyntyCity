@@ -182,11 +182,11 @@ namespace VehiclesControl
 
 			// Apply _acceleration to the front wheels
 	        
-			// _frontLeft motorTorque is _currentAcceleration
-			_frontLeft.motorTorque = _currentAcceleration;
+			// _rearLeft motorTorque is _currentAcceleration
+			_rearLeft.motorTorque = _currentAcceleration;
 
-			// _frontRight motorTorque is _currentAcceleration
-			_frontRight.motorTorque = _currentAcceleration;
+			// _rearRight motorTorque is _currentAcceleration
+			_rearRight.motorTorque = _currentAcceleration;
 
 			// Apply braking force to all wheels
 
