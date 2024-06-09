@@ -33,7 +33,6 @@ Vehicles Documentation Currently "In Progress" & Not Yet Included:
 -------------------------------------------------------------------
 
 * All Vehicles in one scene documentation: (0% Completed) coming soon
-* SedanMedium Related Documentation(s) (80% completed) coming soon...
 * SedanSmall Related Documentation(s) (80% completed) coming soon...
 
 
@@ -161,9 +160,9 @@ Vehicles Control:
 
 * SedanMedium Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SedanMedium/Documentation/SedanMediumController-Spedometer-Documentation.txt
 
-* SedanMedium Controller only with entry in scene setup: coming soon...
+* SedanMedium Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/Documentation/SedanMediumController-wEntry-Documentation.txt
 
-* SedanMedium Controller only with entry in scene setup add speedometer: coming soon...
+* SedanMedium Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/Documentation/SedanMediumController-Spedometer-Documentation.txt
 
 * SedanSmall Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanSmall/Documentation/SedanSmallController-Only-Documentation.txt
 
