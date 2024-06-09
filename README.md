@@ -131,7 +131,7 @@ Vehicles Control:
 
 * PoliceCruiser Controller only with entry in scene setup add speedometer:  coming soon...
 
-* MuscleCar Controller only in scene setup: coming soon...
+* MuscleCar Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/MuscleCar/Documentation/MuscleCarController-Only-Documentation.txt
 
 * MuscleCar Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/MuscleCar/Documentation/MuscleCarController-Spedometer-Documentation.txt
 
