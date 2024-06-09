@@ -156,7 +156,7 @@ Vehicles Control:
 
 * Van Controller only with entry in scene setup add speedometer: coming soon...
 
-* SedanLarge Controller only in scene setup: coming soon...
+* SedanLarge Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/Documentation/SedanLargeController-Only-Documentation.txt
 
 * SedanLarge Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SedanLarge/Documentation/SedanLargeController-Spedometer-Documentation.txt
 
