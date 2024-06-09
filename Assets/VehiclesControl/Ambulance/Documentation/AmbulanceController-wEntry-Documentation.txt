@@ -278,7 +278,7 @@ Width: 100
 Height: 100
 
 
-Text Input: Press E
+Text Input: Drive [E]
 Font Size: 36
 
 Alignment: Center & Middle
