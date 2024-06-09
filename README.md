@@ -33,7 +33,6 @@ Vehicles Documentation Currently "In Progress" & Not Yet Included:
 -------------------------------------------------------------------
 
 * All Vehicles in one scene documentation: (0% Completed) coming soon
-* SedanLarge Related Documentation(s) (80% completed) coming soon...
 * SedanMedium Related Documentation(s) (80% completed) coming soon...
 * SedanSmall Related Documentation(s) (80% completed) coming soon...
 
@@ -107,7 +106,7 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles in scene setup: coming soon...
+* All vehicles with entry in scene setup: coming soon...
 
 * Ambulance Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Ambulance/Documentation/AmbulanceController-Only-Documentation.txt
 
@@ -154,9 +153,9 @@ Vehicles Control:
 
 * SedanLarge Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/SedanLarge/Documentation/SedanLargeController-Spedometer-Documentation.txt
 
-* SedanLarge Controller only with entry in scene setup: coming soon...
+* SedanLarge Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/Documentation/SedanLargeController-wEntry-Documentation.txt
 
-* SedanLarge Controller only with entry in scene setup add speedometer: coming soon...
+* SedanLarge Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/Documentation/SedanLargeController-Spedometer-Documentation.txt
 
 * SedanMedium Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/Documentation/SedanMediumController-Only-Documentation.txt
 
