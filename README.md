@@ -144,9 +144,9 @@ Vehicles Control:
 
 * Taxi Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Taxi/Documentation/TaxiController-Spedometer-Documentation.txt
 
-* Taxi Controller only with entry in scene setup: coming soon...
+* Taxi Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Taxi/Documentation/TaxiController-wEntry-Documentation.txt
 
-* Taxi Controller only with entry in scene setup add speedometer: coming soon...
+* Taxi Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Taxi/Documentation/TaxiController-Spedometer-Documentation.txt
 
 * Van Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Van/Documentation/VanController-Only-Documentation.txt
 
