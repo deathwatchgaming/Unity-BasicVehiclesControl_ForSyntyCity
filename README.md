@@ -118,9 +118,9 @@ Vehicles Control:
 
 * Ambulance Controller only in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Ambulance/Documentation/AmbulanceController-Spedometer-Documentation.txt
 
-* Ambulance Controller only with entry in scene setup:  coming soon...
+* Ambulance Controller only with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Ambulance/Documentation/AmbulanceController-wEntry-Documentation.txt
 
-* Ambulance Controller only with entry in scene setup add speedometer:  coming soon...
+* Ambulance Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Extras/VehicleController-Only-Usage/Vehicle-Speedometer/Assets/VehiclesControl/Ambulance/Documentation/AmbulanceController-Spedometer-Documentation.txt
 
 * PoliceCruiser Controller only in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/PoliceCruiser/Documentation/PoliceCruiserController-Only-Documentation.txt
 
