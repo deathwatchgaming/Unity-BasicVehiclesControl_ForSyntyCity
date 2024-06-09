@@ -458,7 +458,7 @@ Rear Right: SM_Veh_Car_Police_Wheel_rr (Wheel Collider)
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 1500
+Set Rigibody Mass: 2000
 
 -----------------------------------------------------------------------------------
 
