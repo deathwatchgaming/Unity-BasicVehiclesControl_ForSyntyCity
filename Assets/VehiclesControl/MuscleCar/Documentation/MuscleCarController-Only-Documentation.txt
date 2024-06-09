@@ -460,7 +460,7 @@ Rear Right: SM_Veh_Car_Muscle_Wheel_rr (Wheel Collider)
 In Rigidbody:
 -------------
 
-Set Rigibody Mass: 3000
+Set Rigibody Mass: 2500
 
 -----------------------------------------------------------------------------------
 
