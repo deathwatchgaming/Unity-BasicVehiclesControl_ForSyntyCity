@@ -480,7 +480,7 @@ Adjust Settings:
 Transforms:
 -----------
 
-Armored Truck: Ambulance (Transform)
+Ambulance: Ambulance (Transform)
 
 
 -----------------------------------------------------------------------------------
