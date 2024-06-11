@@ -680,7 +680,7 @@ Set Rigibody Mass: 3000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: AmbulanceCamera (AmbulanceTruckCamera.cs)
+Step 23: Add to: AmbulanceCamera (AmbulanceCamera.cs)
 
 -----------------------------------------------------------------------------------
 
