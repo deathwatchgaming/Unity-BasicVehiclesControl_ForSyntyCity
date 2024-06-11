@@ -1863,7 +1863,7 @@ SM_Veh_Car_Van_01 => "Van"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: -18 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -2689,7 +2689,7 @@ SM_Veh_Car_Police_01 => "PoliceCruiser"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: -6 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -3137,7 +3137,7 @@ SM_Veh_Car_Taxi_01 => "Taxi"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 6 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -3608,7 +3608,7 @@ SM_Veh_Car_Sedan_01 => "SedanLarge"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: -12 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -4104,7 +4104,7 @@ SM_Veh_Car_Muscle_01 => "MuscleCar"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 12 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -4622,7 +4622,7 @@ SM_Veh_Car_Medium_01 => "SedanMedium"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 18 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -5164,7 +5164,7 @@ SM_Veh_Car_Small_01 => "SedanSmall"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 24 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -5703,8 +5703,8 @@ Interface Text Object: SedanSmall_SpeedText
 -----------------------------------------------------------------------------------
 
 
-That should about sums it up and should be about it and concludes the all
-vehicles in one Scene with entry basic Vehicle Controller manual setup steps.
+That should about sum it up and should be about it and concludes the all
+vehicles in one scene with entry basic Vehicle Controller manual setup steps.
 You can now begin to modify such further for your specific needs.
 
 Best of Luck!
