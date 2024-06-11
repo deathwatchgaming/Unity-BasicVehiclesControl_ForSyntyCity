@@ -674,7 +674,7 @@ Set Rigibody Mass: 1000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: SedanSmallCamera (SedanSmallTruckCamera.cs)
+Step 23: Add to: SedanSmallCamera (SedanSmallCamera.cs)
 
 -----------------------------------------------------------------------------------
 

@@ -674,7 +674,7 @@ Set Rigibody Mass: 2500
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: MuscleCarCamera (MuscleCarTruckCamera.cs)
+Step 23: Add to: MuscleCarCamera (MuscleCarCamera.cs)
 
 -----------------------------------------------------------------------------------
 

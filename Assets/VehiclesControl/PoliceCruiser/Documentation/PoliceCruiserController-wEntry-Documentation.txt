@@ -674,7 +674,7 @@ Set Rigibody Mass: 2000
 
 -----------------------------------------------------------------------------------
 
-Step 23: Add to: PoliceCruiserCamera (PoliceCruiserTruckCamera.cs)
+Step 23: Add to: PoliceCruiserCamera (PoliceCruiserCamera.cs)
 
 -----------------------------------------------------------------------------------
 
