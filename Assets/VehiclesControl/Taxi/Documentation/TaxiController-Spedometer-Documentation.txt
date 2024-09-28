@@ -203,6 +203,22 @@ Interface IMG02 Object: Taxi_SpeedoNeedle
 Interface Text Object: Taxi_SpeedText
 
 
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+TaxiSpeedometer
+Taxi_SpeedoGuage
+Taxi_SpeedoNeedle
+Taxi_SpeedText
+
+
 -----------------------------------------------------------------------------------
 
 

@@ -309,6 +309,12 @@ Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
 
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
+
 
 -----------------------------------------------------------------------------------
 
@@ -361,6 +367,12 @@ Underlay: Yes Softness: 0.522
 Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
+
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
 
 
 -----------------------------------------------------------------------------------
@@ -415,6 +427,12 @@ Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
 
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
+
 
 -----------------------------------------------------------------------------------
 
@@ -467,6 +485,12 @@ Underlay: Yes Softness: 0.522
 Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
+
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
 
 
 -----------------------------------------------------------------------------------
@@ -521,6 +545,12 @@ Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
 
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
+
 
 -----------------------------------------------------------------------------------
 
@@ -573,6 +603,12 @@ Underlay: Yes Softness: 0.522
 Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
+
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
 
 
 -----------------------------------------------------------------------------------
@@ -627,6 +663,12 @@ Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
 
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
+
 
 -----------------------------------------------------------------------------------
 
@@ -679,6 +721,12 @@ Underlay: Yes Softness: 0.522
 Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
+
+Note: Lastly, disable this "*"_EntryKey object as we do not want this to
+display prior to awake or start methods and to do this we will disable this
+object by default and then there is a wrapper in the script that will find
+the inactive item in start thus doing what will be needed. So yeah, make sure
+to disable this object in the editor.
 
 -----------------------------------------------------------------------------------
 
@@ -2231,6 +2279,23 @@ Interface IMG02 Object: Van_SpeedoNeedle
 Interface Text Object: Van_SpeedText
 
 
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+VanSpeedometer
+Van_SpeedoGuage
+Van_SpeedoNeedle
+Van_SpeedText
+
+
 -----------------------------------------------------------------------------------
 
 Step 66: Identify: the next "Vehicle Prefab"
@@ -2654,6 +2719,23 @@ Interface Parent Object: Ambulance_Speedometer
 Interface IMG01 Object: Ambulance_SpeedoGuage
 Interface IMG02 Object: Ambulance_SpeedoNeedle
 Interface Text Object: Ambulance_SpeedText
+
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+AmbulanceSpeedometer
+Ambulance_SpeedoGuage
+Ambulance_SpeedoNeedle
+Ambulance_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -3106,6 +3188,23 @@ Interface Parent Object: PoliceCruiser_Speedometer
 Interface IMG01 Object: PoliceCruiser_SpeedoGuage
 Interface IMG02 Object: PoliceCruiser_SpeedoNeedle
 Interface Text Object: PoliceCruiser_SpeedText
+
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+PoliceCruiserSpeedometer
+PoliceCruiser_SpeedoGuage
+PoliceCruiser_SpeedoNeedle
+PoliceCruiser_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -3577,6 +3676,22 @@ Interface Parent Object: Taxi_Speedometer
 Interface IMG01 Object: Taxi_SpeedoGuage
 Interface IMG02 Object: Taxi_SpeedoNeedle
 Interface Text Object: Taxi_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+TaxiSpeedometer
+Taxi_SpeedoGuage
+Taxi_SpeedoNeedle
+Taxi_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -4073,6 +4188,23 @@ Interface Parent Object: SedanLarge_Speedometer
 Interface IMG01 Object: SedanLarge_SpeedoGuage
 Interface IMG02 Object: SedanLarge_SpeedoNeedle
 Interface Text Object: SedanLarge_SpeedText
+
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanLargeSpeedometer
+SedanLarge_SpeedoGuage
+SedanLarge_SpeedoNeedle
+SedanLarge_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -4591,6 +4723,23 @@ Interface Parent Object: MuscleCar_Speedometer
 Interface IMG01 Object: MuscleCar_SpeedoGuage
 Interface IMG02 Object: MuscleCar_SpeedoNeedle
 Interface Text Object: MuscleCar_SpeedText
+
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+MuscleCarSpeedometer
+MuscleCar_SpeedoGuage
+MuscleCar_SpeedoNeedle
+MuscleCar_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -5133,6 +5282,22 @@ Interface Parent Object: SedanMedium_Speedometer
 Interface IMG01 Object: SedanMedium_SpeedoGuage
 Interface IMG02 Object: SedanMedium_SpeedoNeedle
 Interface Text Object: SedanMedium_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanMediumSpeedometer
+SedanMedium_SpeedoGuage
+SedanMedium_SpeedoNeedle
+SedanMedium_SpeedText
 
 
 -----------------------------------------------------------------------------------
@@ -5698,6 +5863,22 @@ Interface Parent Object: SedanSmall_Speedometer
 Interface IMG01 Object: SedanSmall_SpeedoGuage
 Interface IMG02 Object: SedanSmall_SpeedoNeedle
 Interface Text Object: SedanSmall_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanSmallSpeedometer
+SedanSmall_SpeedoGuage
+SedanSmall_SpeedoNeedle
+SedanSmall_SpeedText
 
 
 -----------------------------------------------------------------------------------

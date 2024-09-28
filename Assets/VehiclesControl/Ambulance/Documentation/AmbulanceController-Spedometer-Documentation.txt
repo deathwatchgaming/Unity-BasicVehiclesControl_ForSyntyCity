@@ -203,6 +203,21 @@ Interface IMG02 Object: Ambulance_SpeedoNeedle
 Interface Text Object: Ambulance_SpeedText
 
 
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+AmbulanceSpeedometer
+Ambulance_SpeedoGuage
+Ambulance_SpeedoNeedle
+Ambulance_SpeedText
+
+
 -----------------------------------------------------------------------------------
 
 

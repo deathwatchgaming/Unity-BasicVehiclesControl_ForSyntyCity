@@ -295,10 +295,13 @@ Note: The face, outline and underlay are merely starting suggestions that you
 can tweak further to your desired likings as well as any other related
 settings of the likes.
 
-Ok, now that this part is done we can start moving to other setup steps...
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
 
-but..., for now since we do not need the interface canvas text item at this point 
-let us disable the Interface in inspector for now until we need it
+Ok, now that this part is done we can start moving to other setup steps...
 
 
 -----------------------------------------------------------------------------------
@@ -696,10 +699,6 @@ Step 24: Add to: SedanSmall (SedanSmallEntry.cs)
 
 -----------------------------------------------------------------------------------
 
-
-Firstly, if you remember earlier in instructions we disabled the "Player"
-object & the "Interface" object as we noted those were not needed at the
-time, right?! Ok, well now they should be re-enabled as they are now needed.
 
 Attach component / script (SedanSmallEntry.cs) to "SedanSmall"
 
