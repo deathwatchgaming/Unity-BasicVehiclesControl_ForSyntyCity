@@ -17,7 +17,7 @@ namespace VehiclesControl
 		// Transforms
 		[Header("Transforms")]
 
-			[Tooltip("The humvee transform")]
+			[Tooltip("The van transform")]
 			// Transform _van
 			[SerializeField] private Transform _van;
         

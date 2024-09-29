@@ -1,5 +1,5 @@
 /*
- * File: Dune Buggy Entry
+ * File: Police Cruiser Entry
  * Name: PoliceCruiserEntry.cs
  * Author: DeathwatchGaming
  * License: MIT

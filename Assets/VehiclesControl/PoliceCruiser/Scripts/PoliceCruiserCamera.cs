@@ -17,7 +17,7 @@ namespace VehiclesControl
 		// Transforms
 		[Header("Transforms")]
 
-			[Tooltip("The dune buggy transform")]
+			[Tooltip("The police cruiser transform")]
 			// Transform _policeCruiser
 			[SerializeField] private Transform _policeCruiser;
         
