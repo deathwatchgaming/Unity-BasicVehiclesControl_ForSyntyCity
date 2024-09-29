@@ -1,6 +1,6 @@
 /*
- * File: Ambulance Entry 
- * Name: AmbulanceEntry.cs
+ * File: Ambulance 02 Entry 
+ * Name: Ambulance02Entry.cs
  * Author: DeathwatchGaming
  * License: MIT
  */
@@ -15,8 +15,8 @@ namespace VehiclesControl
     // RequireComponent typeof BoxCollider
     [RequireComponent(typeof(BoxCollider))]
 
-    // public class AmbulanceEntry 
-    public class AmbulanceEntry : MonoBehaviour
+    // public class Ambulance02Entry 
+    public class Ambulance02Entry : MonoBehaviour
     {  
         // Input Customizations
         [Header("Input Customizations")] 
@@ -33,8 +33,8 @@ namespace VehiclesControl
         [Header("Game Objects")]
 
             [Tooltip("The ambulance game object")]
-            // GameObject _ambulance
-            [SerializeField] private GameObject _ambulance;
+            // GameObject _ambulance02
+            [SerializeField] private GameObject _ambulance02;
 
             [Tooltip("The player game object")]
             // GameObject _player
@@ -48,17 +48,17 @@ namespace VehiclesControl
         [Header("Active State")]
 
             [Tooltip("The active state bool")]
-            // bool _inAmbulance is false
-            [SerializeField] private bool _inAmbulance = false;
+            // bool _inAmbulance02 is false
+            [SerializeField] private bool _inAmbulance02 = false;
         
-        // AmbulanceController _ambulanceScript
-        private AmbulanceController _ambulanceScript;
+        // Ambulance02Controller _ambulance02Script
+        private Ambulance02Controller _ambulance02Script;
         
-        // Camera _ambulanceCamera
-        private Camera _ambulanceCamera;
+        // Camera _ambulance02Camera
+        private Camera _ambulance02Camera;
 
-        // AudioListener _ambulanceCameraAudioListener
-        private AudioListener _ambulanceCameraAudioListener; 
+        // AudioListener _ambulance02CameraAudioListener
+        private AudioListener _ambulance02CameraAudioListener; 
 
         // Rigidbody _rigidbody
         private Rigidbody _rigidbody;
@@ -95,29 +95,29 @@ namespace VehiclesControl
         // private void Start
         private void Start() 
         {
-            // _ambulanceScript is GetComponent AmbulanceController
-            _ambulanceScript = GetComponent<AmbulanceController>();
+            // _ambulance02Script is GetComponent Ambulance02Controller
+            _ambulance02Script = GetComponent<Ambulance02Controller>();
 
-            // _ambulanceScript enabled is false
-            _ambulanceScript.enabled = false;
+            // _ambulance02Script enabled is false
+            _ambulance02Script.enabled = false;
             
-            // _ambulanceCamera is GetComponentInChildren Camera
-            _ambulanceCamera = GetComponentInChildren<Camera>();
+            // _ambulance02Camera is GetComponentInChildren Camera
+            _ambulance02Camera = GetComponentInChildren<Camera>();
             
-            // _ambulanceCamera enabled is false
-            _ambulanceCamera.enabled = false;
+            // _ambulance02Camera enabled is false
+            _ambulance02Camera.enabled = false;
 
-            // _ambulanceCameraAudioListener is GetComponentInChildren AudioListener
-            _ambulanceCameraAudioListener = GetComponentInChildren<AudioListener>();
+            // _ambulance02CameraAudioListener is GetComponentInChildren AudioListener
+            _ambulance02CameraAudioListener = GetComponentInChildren<AudioListener>();
             
-            // _ambulanceCameraAudioListener enabled is false
-            _ambulanceCameraAudioListener.enabled = false; 
+            // _ambulance02CameraAudioListener enabled is false
+            _ambulance02CameraAudioListener.enabled = false; 
 
             // _rigidbody
             _rigidbody = GetComponent<Rigidbody>();
 
-            // GameObject _interfaceTextObject is FindInActiveObjectByName Ambulance_EntryKey
-            GameObject _interfaceTextObject = FindInActiveObjectByName("Ambulance_EntryKey");
+            // GameObject _interfaceTextObject is FindInActiveObjectByName Ambulance02_EntryKey
+            GameObject _interfaceTextObject = FindInActiveObjectByName("Ambulance02_EntryKey");
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
@@ -129,8 +129,8 @@ namespace VehiclesControl
         // private void Update
         private void Update()
         {
-            // if _inAmbulance and Input GetKey KeyCode _exitKey
-            if (_inAmbulance && Input.GetKey(_exitKey))
+            // if _inAmbulance02 and Input GetKey KeyCode _exitKey
+            if (_inAmbulance02 && Input.GetKey(_exitKey))
             {
                 // _player SetActive is true
                 _player.SetActive(true);
@@ -138,35 +138,35 @@ namespace VehiclesControl
                 // _player transform parent is null
                 _player.transform.parent = null;
 
-                // _ambulanceScript enabled is false
-                _ambulanceScript.enabled = false;
+                // _ambulance02Script enabled is false
+                _ambulance02Script.enabled = false;
                 
-                // _ambulanceCamera enabled is false
-                _ambulanceCamera.enabled = false;
+                // _ambulance02Camera enabled is false
+                _ambulance02Camera.enabled = false;
 
-                // _ambulanceCameraAudioListener enabled is false
-                _ambulanceCameraAudioListener.enabled = false;                 
+                // _ambulance02CameraAudioListener enabled is false
+                _ambulance02CameraAudioListener.enabled = false;                 
 
-                // _inAmbulance is false
-                _inAmbulance = false;
+                // _inAmbulance02 is false
+                _inAmbulance02 = false;
 
-            } // close if _inAmbulance and Input GetKey KeyCode _exitKey
+            } // close if _inAmbulance02 and Input GetKey KeyCode _exitKey
 
         } // close private void Update         
 
         // private void OnTriggerStay Collider other
         private void OnTriggerStay(Collider other)
         {
-        	// if not _inAmbulance and gameObject tag is Player
-            if (!_inAmbulance && other.gameObject.tag == "Player")
+        	// if not _inAmbulance02 and gameObject tag is Player
+            if (!_inAmbulance02 && other.gameObject.tag == "Player")
             {
             	// _interfaceTextObject SetActive is true
                 _interfaceTextObject.SetActive(true);
 
-            } // close if not _inAmbulance and gameObject tag is Player
+            } // close if not _inAmbulance02 and gameObject tag is Player
             
-            // if not _inAmbulance and gameObject tag is Player and Input GetKey KeyCode _enterKey
-            if (!_inAmbulance && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
+            // if not _inAmbulance02 and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            if (!_inAmbulance02 && other.gameObject.tag == "Player" && Input.GetKey(_enterKey))
             {
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
@@ -174,22 +174,22 @@ namespace VehiclesControl
                 // _player SetActive is false 
                 _player.SetActive(false);
 
-                // _player transform parent is _ambulance transform
-                _player.transform.parent = _ambulance.transform;
+                // _player transform parent is _ambulance02 transform
+                _player.transform.parent = _ambulance02.transform;
 
-                // _ambulanceScript enabled is true
-                _ambulanceScript.enabled = true;
+                // _ambulance02Script enabled is true
+                _ambulance02Script.enabled = true;
                 
-                // _ambulanceCamera enabled is true
-                _ambulanceCamera.enabled = true;
+                // _ambulance02Camera enabled is true
+                _ambulance02Camera.enabled = true;
 
-                // _ambulanceCameraAudioListener enabled is true
-                _ambulanceCameraAudioListener.enabled = true; 
+                // _ambulance02CameraAudioListener enabled is true
+                _ambulance02CameraAudioListener.enabled = true; 
 
-                // _inAmbulance is true
-                _inAmbulance = true;
+                // _inAmbulance02 is true
+                _inAmbulance02 = true;
 
-            } // close if not _inAmbulance and gameObject tag is Player and Input GetKey KeyCode _enterKey
+            } // close if not _inAmbulance02 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
         } // close private void OnTriggerStay Collider other
         
@@ -220,6 +220,6 @@ namespace VehiclesControl
 
         } // close private IEnumerator RigidbodySleep float duration  
         
-    } // close public class AmbulanceEntry  
+    } // close public class Ambulance02Entry  
 
 } // close namespace VehiclesControl
