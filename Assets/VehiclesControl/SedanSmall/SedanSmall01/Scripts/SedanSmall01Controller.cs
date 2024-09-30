@@ -114,6 +114,10 @@ namespace VehiclesControl
 			// _centerOfGravityOffset is -1
 			[SerializeField] private float _centerOfGravityOffset = -1f;
 
+			[Tooltip("The rigidbody component mass")]
+			// float _rigidbodyMass is 1000
+			[SerializeField] private float _rigidbodyMass = 1000f;
+
 			// _currentAcceleration is 0
 			private float _currentAcceleration = 0f;
 
@@ -140,8 +144,8 @@ namespace VehiclesControl
 			// _rigidbody is GetComponent Rigidbody
 			_rigidbody = GetComponent<Rigidbody>();
 	        
-			// _rigidbody mass is 1000
-			_rigidbody.mass = 1000f;
+			// _rigidbody mass is _rigidbodyMass
+			_rigidbody.mass = _rigidbodyMass;
 		
 			// Adjust the center of mass vertically to help prevent the sedanSmall01 car from rolling
 			// _rigidbody centerOfMass
