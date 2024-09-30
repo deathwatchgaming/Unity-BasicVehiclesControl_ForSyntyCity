@@ -1,0 +1,229 @@
+Taxi01 Speedometer Setup Steps:
+-------------------------------------
+
+
+Note: these instructions steps found below are for the script provided that is
+for usage with the vehicle entry script applied. Ok, noting that if you only
+followed the vehicle setup steps to use vehicle controller and not vehicle
+entry additions after and now you want to add the vehicle speedometer then
+you need the original spedometer script for that and that can be found in the
+extras folder with script specifc to the vehicle controller you are using.
+Please note that Iopted to consider this fact after thinking back on the
+instructions steps for vehicle controller setups and then understanding now
+that hmm, if I made the speeedometer script to work properly with entry
+script usages that this would put anyone using just the vehicle controller
+setups SOL in regards to using the newer speedometer script, so as such I
+opted to place the old speedo scripts in the extras directory just for that
+purpose. Hopefully that all makes sense. :)
+
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Step 1: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: In "VehiclesSpeed" create empty child: "Taxi01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "Taxi01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "Taxi01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Taxi01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "Taxi01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Taxi01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "Taxi01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "Taxi01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: In Vehicle > Taxi01 attach script: (Taxi01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach Taxi01Speedometer script: (Taxi01Speedometer.cs) to
+Vehicle: "Taxi01"
+
+In: "Taxi01" > Taxi01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: Taxi01_Needle
+
+Speed Text: Taxi01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: Taxi01_Speedometer
+Interface IMG01 Object: Taxi01_SpeedoGuage
+Interface IMG02 Object: Taxi01_SpeedoNeedle
+Interface Text Object: Taxi01_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+Taxi01Speedometer
+Taxi01_SpeedoGuage
+Taxi01_SpeedoNeedle
+Taxi01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sum it up and should be about it and concludes the basic
+vehicle speedometer manual setup steps. You can now begin to modify such
+further for your specific needs.
+
+Best of Luck!
