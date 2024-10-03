@@ -11,15 +11,16 @@ from Synty Polygon City Asset.
 
 
 Synty City Vehicles (total: 32)
+-------------------------------
 
-Ambulance (total: 4)
-Police Cruiser (total: 4)
-Muscle Car (total: 4)
-Sedan Large (total: 4)
-Sedan Medium (total: 4)
-Sedan Small (total: 4)
-Taxi (total: 4)
-Van (total: 4)
+* Ambulance (total: 4)
+* Police Cruiser (total: 4)
+* Muscle Car (total: 4)
+* Sedan Large (total: 4)
+* Sedan Medium (total: 4)
+* Sedan Small (total: 4)
+* Taxi (total: 4)
+* Van (total: 4)
 
 
 Release Intentions Note:
@@ -112,7 +113,7 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles in scene with entry in scene setup: (in progress)
+* All vehicles in scene with entry in scene setup: (in progress, coming soon!)
 
 * All vehicles types with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/Documentation/AllController-Types-wEntry-Documentation.txt
 
@@ -155,7 +156,7 @@ Ambulance: (total: 4)
 
 * Ambulance 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Ambulance/Ambulance04/Documentation/Ambulance04Controller-Spedometer-Documentation.txt
 
-* All Ambulances in scene with entry: (in progess)
+* All Ambulances in scene with entry setup: (in progress, coming soon!)
 
 
 Police Cruiser: (total: 4)
@@ -194,7 +195,7 @@ Police Cruiser: (total: 4)
 
 * PoliceCruiser 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/PoliceCruiser/PoliceCruiser04/Documentation/PoliceCruiser04Controller-Spedometer-Documentation.txt
 
-* All Police Cruisers in scene with entry: (in progess)
+* All Police Cruisers in scene with entry setup: (in progress, coming soon!)
 
 
 Muscle Car: (total: 4)
@@ -233,7 +234,7 @@ Muscle Car: (total: 4)
 
 * MuscleCar 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/MuscleCar/MuscleCar04/Documentation/MuscleCar04Controller-Spedometer-Documentation.txt
 
-* All Muscle Cars in scene with entry: (in progess)
+* All Muscle Cars in scene with entry setup: (in progress, coming soon!)
 
 
 Taxi: (total: 4)
@@ -272,7 +273,7 @@ Taxi: (total: 4)
 
 * Taxi 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Taxi/Taxi04/Documentation/Taxi04Controller-Spedometer-Documentation.txt
 
-* All Taxis in scene with entry: (in progess)
+* All Taxis in scene with entry setup: (in progress, coming soon!)
 
 
 Van: (total: 4)
@@ -311,7 +312,7 @@ Van: (total: 4)
 
 * Van 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Van/Van04/Documentation/Van04Controller-Spedometer-Documentation.txt
 
-* All Vans in scene with entry: (in progess)
+* All Vans in scene with entry setup: (in progress, coming soon!)
 
 
 Sedan Large: (total: 4)
@@ -350,7 +351,7 @@ Sedan Large: (total: 4)
 
 * SedanLarge 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/SedanLarge04/Documentation/SedanLarge04Controller-Spedometer-Documentation.txt
 
-* All Sedan Larges in scene with entry: (in progess)
+* All Sedan Larges in scene with entry setup: (in progress, coming soon!)
 
 
 Sedan Medium: (total: 4)
@@ -389,10 +390,10 @@ Sedan Medium: (total: 4)
 
 * SedanMedium 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/SedanMedium04/Documentation/SedanMedium04Controller-Spedometer-Documentation.txt
 
-* All Sedan Mediums in scene with entry: (in progess)
+* All Sedan Mediums in scene with entry setup: (in progess)
 
 
-SedanSmall: (total: 4)
+Sedan Small: (total: 4)
 --------------------------
 
 
@@ -428,5 +429,5 @@ SedanSmall: (total: 4)
 
 * SedanSmall 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanSmall/SedanSmall04/Documentation/SedanSmall04Controller-Spedometer-Documentation.txt
 
-* All Sedan Smalls in scene with entry: (in progess)
+* All Sedan Smalls in scene with entry setup: (in progress, coming soon!)
 
