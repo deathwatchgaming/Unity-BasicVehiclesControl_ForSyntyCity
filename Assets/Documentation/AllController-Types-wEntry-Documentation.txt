@@ -1949,6 +1949,8 @@ Position: X: -18 Y: 0 Z: 0
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
+Material: PolygonCity_Mat_01_A
+
 Then move "Van01" into the empty: "Vehicles" as child of.
 
 
@@ -2362,6 +2364,8 @@ Next, set the Transform:
 Position: X: 0 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "Ambulance01" into the empty: "Vehicles" as child of.
 
@@ -2808,6 +2812,8 @@ Next, set the Transform:
 Position: X: -6 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "PoliceCruiser01" into the empty: "Vehicles" as child of.
 
@@ -3273,6 +3279,8 @@ Next, set the Transform:
 Position: X: 6 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "Taxi01" into the empty: "Vehicles" as child of.
 
@@ -3760,6 +3768,8 @@ Next, set the Transform:
 Position: X: -12 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "SedanLarge01" into the empty: "Vehicle" as child of.
 
@@ -4273,6 +4283,8 @@ Next, set the Transform:
 Position: X: 12 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "MuscleCar01" into the empty: "Vehicles" as child of.
 
@@ -4808,6 +4820,8 @@ Next, set the Transform:
 Position: X: 18 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "SedanMedium01" into the empty: "Vehicles" as child of.
 
@@ -5366,6 +5380,8 @@ Next, set the Transform:
 Position: X: 24 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
 
 Then move "SedanSmall01" into the empty: "Vehicles" as child of.
 
