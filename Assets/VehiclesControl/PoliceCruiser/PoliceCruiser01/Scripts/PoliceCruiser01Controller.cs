@@ -54,6 +54,10 @@ namespace VehiclesControl
 			// Rigidbody _rigidbody
 			[SerializeField] private Rigidbody _rigidbody;
 
+			[Tooltip("The mesh collider component")]
+			// MeshCollider _meshCollider
+			[SerializeField] private MeshCollider _meshCollider;
+
 		// Wheel Transforms
 		[Header("Wheel Transforms")]
 
@@ -148,6 +152,12 @@ namespace VehiclesControl
 			// _rigidbody centerOfMass
 			_rigidbody.centerOfMass += Vector3.up * _centerOfGravityOffset;
 
+			// _meshCollider GetComponent MeshCollider
+			_meshCollider = GetComponent<MeshCollider>();
+
+			// _meshCollider convex
+			_meshCollider.convex = true;
+			
 		} // close private void Awake
 
 		// private void Update
