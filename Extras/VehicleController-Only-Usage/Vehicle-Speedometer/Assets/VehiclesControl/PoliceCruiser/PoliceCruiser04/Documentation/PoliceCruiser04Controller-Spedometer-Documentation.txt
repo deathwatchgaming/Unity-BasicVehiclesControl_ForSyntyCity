@@ -40,6 +40,9 @@ Rect Transform:
 
 Bottom Left
 
+Pos X: 146.3
+Pos Y: 143
+
 Width: 300
 Height: 300
 
@@ -119,8 +122,10 @@ Rect Transform:
 
 Middle Center
 
-Width: 300
-Height: 300
+Pos Y: -24
+
+Width: 260
+Height: 260
 
 
 In: "Image"
@@ -146,6 +151,8 @@ Rect Transform:
 ---------------
 
 Middle Center
+
+Pos Y: -120.4
 
 Width: 200
 Height: 50
