@@ -1300,6 +1300,15 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
   Ambulance02
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
@@ -1313,6 +1322,24 @@ Vehicles
 Fully Expanded:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
   Ambulance02
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
@@ -1996,6 +2023,24 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
   Ambulance03
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
@@ -2009,6 +2054,42 @@ Vehicles
 Fully Expanded:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera
   Ambulance03
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
@@ -2725,6 +2806,33 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
   Ambulance04
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
@@ -2738,6 +2846,60 @@ Vehicles
 Fully Expanded:
 
 Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera
   Ambulance04
     SM_Veh_Car_Ambo_Door_l
     SM_Veh_Car_Ambo_Door_r
