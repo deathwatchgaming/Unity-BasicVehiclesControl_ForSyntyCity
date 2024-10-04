@@ -159,7 +159,8 @@ Ambulance: (total: 4)
 
 * Ambulance 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Ambulance/Ambulance04/Documentation/Ambulance04Controller-Spedometer-Documentation.txt
 
-* All Ambulances in scene with entry setup: (in progress, coming soon!)
+* All Ambulances in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Ambulance/Documentation/AllAmbulanceControllers-wEntry-Documentation.txt
+
 
 
 Police Cruiser: (total: 4)
