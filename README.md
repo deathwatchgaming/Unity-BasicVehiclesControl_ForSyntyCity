@@ -199,7 +199,7 @@ Police Cruiser: (total: 4)
 
 * PoliceCruiser 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/PoliceCruiser/PoliceCruiser04/Documentation/PoliceCruiser04Controller-Spedometer-Documentation.txt
 
-* All Police Cruisers in scene with entry setup: (in progress, coming soon!)
+* All Police Cruisers in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/PoliceCruiser/Documentation/AllPoliceCruiserControllers-wEntry-Documentation.txt
 
 
 Muscle Car: (total: 4)
