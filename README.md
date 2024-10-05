@@ -355,7 +355,7 @@ Sedan Large: (total: 4)
 
 * SedanLarge 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/SedanLarge04/Documentation/SedanLarge04Controller-Spedometer-Documentation.txt
 
-* All Sedan Larges in scene with entry setup: (in progress, coming soon!)
+* All Sedan Larges in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanLarge/Documentation/AllSedanLargeControllers-wEntry-Documentation.txt
 
 
 Sedan Medium: (total: 4)
@@ -394,7 +394,7 @@ Sedan Medium: (total: 4)
 
 * SedanMedium 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/SedanMedium04/Documentation/SedanMedium04Controller-Spedometer-Documentation.txt
 
-* All Sedan Mediums in scene with entry setup: (in progess)
+* All Sedan Mediums in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanMedium/Documentation/AllSedanMediumControllers-wEntry-Documentation.txt
 
 
 Sedan Small: (total: 4)
@@ -433,5 +433,5 @@ Sedan Small: (total: 4)
 
 * SedanSmall 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanSmall/SedanSmall04/Documentation/SedanSmall04Controller-Spedometer-Documentation.txt
 
-* All Sedan Smalls in scene with entry setup: (in progress, coming soon!)
+* All Sedan Smalls in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/SedanSmall/Documentation/AllSedanSmallControllers-wEntry-Documentation.txt
 
