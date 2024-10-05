@@ -238,7 +238,7 @@ Muscle Car: (total: 4)
 
 * MuscleCar 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/MuscleCar/MuscleCar04/Documentation/MuscleCar04Controller-Spedometer-Documentation.txt
 
-* All Muscle Cars in scene with entry setup: (in progress, coming soon!)
+* All Muscle Cars in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/MuscleCar/Documentation/AllMuscleCarControllers-wEntry-Documentation.txt
 
 
 Taxi: (total: 4)
@@ -277,7 +277,7 @@ Taxi: (total: 4)
 
 * Taxi 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Taxi/Taxi04/Documentation/Taxi04Controller-Spedometer-Documentation.txt
 
-* All Taxis in scene with entry setup: (in progress, coming soon!)
+* All Taxis in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Taxi/Documentation/AllTaxiControllers-wEntry-Documentation.txt
 
 
 Van: (total: 4)
@@ -316,7 +316,7 @@ Van: (total: 4)
 
 * Van 04 Controller only with entry in scene setup add speedometer: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Van/Van04/Documentation/Van04Controller-Spedometer-Documentation.txt
 
-* All Vans in scene with entry setup: (in progress, coming soon!)
+* All Vans in scene with entry setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Van/Documentation/AllVanControllers-wEntry-Documentation.txt
 
 
 Sedan Large: (total: 4)
