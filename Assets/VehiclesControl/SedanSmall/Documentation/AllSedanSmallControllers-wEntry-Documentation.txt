@@ -396,7 +396,7 @@ SM_Veh_Car_Small_01 => "SedanSmall01"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: -9 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -1075,7 +1075,7 @@ SM_Veh_Car_Small_01 => "SedanSmall02"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: -3 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -1783,7 +1783,7 @@ SM_Veh_Car_Small_01 => "SedanSmall03"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 3 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
@@ -2542,7 +2542,7 @@ SM_Veh_Car_Small_01 => "SedanSmall04"
 
 Next, set the Transform:
 
-Position: X: 0 Y: 0 Z: 0 
+Position: X: 9 Y: 0 Z: 0 
 Rotation: X: 0 Y: 0 Z: 0 
 Scale:    X: 1 Y: 1 Z: 1
 
