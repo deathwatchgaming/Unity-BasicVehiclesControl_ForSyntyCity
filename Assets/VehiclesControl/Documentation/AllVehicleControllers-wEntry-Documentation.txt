@@ -11988,6 +11988,5579 @@ Interface
 EventSystem
 
 
+-----------------------------------------------------------------------------------
+
+Step 198:  Create child of "VehiclesEntry" add Text tmp: "SedanLarge01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanLarge01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 199: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Sedan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 200: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Sedan_01 => "SedanLarge01"
+
+Next, set the Transform:
+
+Position: X: -21 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
+
+Then move "SedanLarge01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 201: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 202: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanLarge01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanLarge01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 203: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: -1.24979 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 204: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.361439
+Front Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.361439
+Rear Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 205: Add to: SedanLarge01 (SedanLarge01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge01Controller.cs) to "SedanLarge01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanLarge01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2000
+
+
+-----------------------------------------------------------------------------------
+
+Step 206: Add to: SedanLarge01Camera (SedanLarge01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge01Camera.cs) to "SedanLarge01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanLarge01: SedanLarge01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 207: Add to: SedanLarge01 (SedanLarge01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge01Entry.cs) to "SedanLarge01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanLarge01: SedanLarge01
+Player: Player
+InterfaceText Object: SedanLarge01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
+Size: X: 4.003421 Y: 1.174145 Z: 1.925263
+
+
+-----------------------------------------------------------------------------------
+
+Step 208: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 209: In "VehiclesSpeed" create empty child: "SedanLarge01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 210: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanLarge01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 211: In Interface > Canvas > VehiclesSpeed add IMG: "SedanLarge01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 212: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanLarge01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 213: In Vehicles > SedanLarge01 attach script: (SedanLarge01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanLarge01Speedometer script: (SedanLarge01Speedometer.cs) to
+Vehicle: "SedanLarge01"
+
+In: "SedanLarge01" > SedanLarge01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanLarge01_Needle
+
+Speed Text: SedanLarge01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanLarge01_Speedometer
+Interface IMG01 Object: SedanLarge01_SpeedoGuage
+Interface IMG02 Object: SedanLarge01_SpeedoNeedle
+Interface Text Object: SedanLarge01_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanLarge01Speedometer
+SedanLarge01_SpeedoGuage
+SedanLarge01_SpeedoNeedle
+SedanLarge01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+Interface    
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      Ambulance01Speedometer
+        Ambulance01_SpeedoGuage
+        Ambulance01_SpeedoNeedle
+        Ambulance01_SpeedText  
+      Ambulance02Speedometer
+        Ambulance02_SpeedoGuage
+        Ambulance02_SpeedoNeedle
+        Ambulance02_SpeedText     
+      Ambulance03Speedometer
+        Ambulance03_SpeedoGuage
+        Ambulance03_SpeedoNeedle
+        Ambulance03_SpeedText 
+      Ambulance04Speedometer
+        Ambulance04_SpeedoGuage
+        Ambulance04_SpeedoNeedle
+        Ambulance04_SpeedText     
+      MuscleCar01Speedometer
+        MuscleCar01_SpeedoGuage
+        MuscleCar01_SpeedoNeedle
+        MuscleCar01_SpeedText    
+      MuscleCar02Speedometer
+        MuscleCar02_SpeedoGuage
+        MuscleCar02_SpeedoNeedle
+       MuscleCar02_SpeedText  
+      MuscleCar03Speedometer
+        MuscleCar03_SpeedoGuage
+        MuscleCar03_SpeedoNeedle
+        MuscleCar03_SpeedText   
+      MuscleCar04Speedometer
+        MuscleCar04_SpeedoGuage
+        MuscleCar04_SpeedoNeedle
+        MuscleCar04_SpeedText     
+      PoliceCruiser01Speedometer
+        PoliceCruiser01_SpeedoGuage
+        PoliceCruiser01_SpeedoNeedle
+        PoliceCruiser01_SpeedText    
+      PoliceCruiser02Speedometer
+        PoliceCruiser02_SpeedoGuage
+        PoliceCruiser02_SpeedoNeedle
+        PoliceCruiser02_SpeedText 
+      PoliceCruiser03Speedometer
+        PoliceCruiser03_SpeedoGuage
+        PoliceCruiser03_SpeedoNeedle
+        PoliceCruiser03_SpeedText
+      PoliceCruiser04Speedometer
+        PoliceCruiser04_SpeedoGuage
+        PoliceCruiser04_SpeedoNeedle
+        PoliceCruiser04_SpeedText     
+      SedanLarge01Speedometer
+        SedanLarge01_SpeedoGuage
+        SedanLarge01_SpeedoNeedle
+        SedanLarge01_SpeedText    
+    VehiclesEntry
+      Ambulance01_EntryKey
+      Ambulance02_EntryKey
+      Ambulance03_EntryKey 
+      Ambulance04_EntryKey     
+      MuscleCar01_EntryKey
+      MuscleCar02_EntryKey 
+      MuscleCar03_EntryKey
+      MuscleCar04_EntryKey     
+      PoliceCruiser01_EntryKey
+      PoliceCruiser02_EntryKey
+      PoliceCruiser03_EntryKey
+      PoliceCruiser04_EntryKey     
+      SedanLarge01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 214:  Create child of "VehiclesEntry" add Text tmp: "SedanLarge02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanLarge02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 215: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Sedan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 216: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Sedan_01 => "SedanLarge02"
+
+Next, set the Transform:
+
+Position: X: -15 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_02_A
+
+Then move "SedanLarge02" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 217: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 218: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanLarge02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanLarge02Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 219: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: -1.24979 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 220: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.361439
+Front Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.361439
+Rear Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 221: Add to: SedanLarge02 (SedanLarge02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge02Controller.cs) to "SedanLarge02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanLarge02 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2000
+
+
+-----------------------------------------------------------------------------------
+
+Step 222: Add to: SedanLarge02Camera (SedanLarge02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge02Camera.cs) to "SedanLarge02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanLarge02: SedanLarge02 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 223: Add to: SedanLarge02 (SedanLarge02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge02Entry.cs) to "SedanLarge02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanLarge02: SedanLarge02
+Player: Player
+InterfaceText Object: SedanLarge02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
+Size: X: 4.003421 Y: 1.174145 Z: 1.925263
+
+
+-----------------------------------------------------------------------------------
+
+Step 224: In "VehiclesSpeed" create empty child: "SedanLarge02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 225: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanLarge02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 226: In Interface > Canvas > VehiclesSpeed add IMG: "SedanLarge02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 227: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanLarge02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 228: In Vehicles > SedanLarge02 attach script: (SedanLarge02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanLarge02Speedometer script: (SedanLarge02Speedometer.cs) to
+Vehicle: "SedanLarge02"
+
+In: "SedanLarge02" > SedanLarge02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanLarge02_Needle
+
+Speed Text: SedanLarge02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanLarge02_Speedometer
+Interface IMG01 Object: SedanLarge02_SpeedoGuage
+Interface IMG02 Object: SedanLarge02_SpeedoNeedle
+Interface Text Object: SedanLarge02_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanLarge02Speedometer
+SedanLarge02_SpeedoGuage
+SedanLarge02_SpeedoNeedle
+SedanLarge02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+Interface        
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      Ambulance01Speedometer
+        Ambulance01_SpeedoGuage
+        Ambulance01_SpeedoNeedle
+        Ambulance01_SpeedText  
+      Ambulance02Speedometer
+        Ambulance02_SpeedoGuage
+        Ambulance02_SpeedoNeedle
+        Ambulance02_SpeedText     
+      Ambulance03Speedometer
+        Ambulance03_SpeedoGuage
+        Ambulance03_SpeedoNeedle
+        Ambulance03_SpeedText 
+      Ambulance04Speedometer
+        Ambulance04_SpeedoGuage
+        Ambulance04_SpeedoNeedle
+        Ambulance04_SpeedText     
+      MuscleCar01Speedometer
+        MuscleCar01_SpeedoGuage
+        MuscleCar01_SpeedoNeedle
+        MuscleCar01_SpeedText    
+      MuscleCar02Speedometer
+        MuscleCar02_SpeedoGuage
+        MuscleCar02_SpeedoNeedle
+       MuscleCar02_SpeedText  
+      MuscleCar03Speedometer
+        MuscleCar03_SpeedoGuage
+        MuscleCar03_SpeedoNeedle
+        MuscleCar03_SpeedText   
+      MuscleCar04Speedometer
+        MuscleCar04_SpeedoGuage
+        MuscleCar04_SpeedoNeedle
+        MuscleCar04_SpeedText     
+      PoliceCruiser01Speedometer
+        PoliceCruiser01_SpeedoGuage
+        PoliceCruiser01_SpeedoNeedle
+        PoliceCruiser01_SpeedText    
+      PoliceCruiser02Speedometer
+        PoliceCruiser02_SpeedoGuage
+        PoliceCruiser02_SpeedoNeedle
+        PoliceCruiser02_SpeedText 
+      PoliceCruiser03Speedometer
+        PoliceCruiser03_SpeedoGuage
+        PoliceCruiser03_SpeedoNeedle
+        PoliceCruiser03_SpeedText
+      PoliceCruiser04Speedometer
+        PoliceCruiser04_SpeedoGuage
+        PoliceCruiser04_SpeedoNeedle
+        PoliceCruiser04_SpeedText     
+      SedanLarge01Speedometer
+        SedanLarge01_SpeedoGuage
+        SedanLarge01_SpeedoNeedle
+        SedanLarge01_SpeedText 
+      SedanLarge02Speedometer
+        SedanLarge02_SpeedoGuage
+        SedanLarge02_SpeedoNeedle
+        SedanLarge02_SpeedText
+    VehiclesEntry
+      Ambulance01_EntryKey
+      Ambulance02_EntryKey
+      Ambulance03_EntryKey 
+      Ambulance04_EntryKey     
+      MuscleCar01_EntryKey
+      MuscleCar02_EntryKey 
+      MuscleCar03_EntryKey
+      MuscleCar04_EntryKey     
+      PoliceCruiser01_EntryKey
+      PoliceCruiser02_EntryKey
+      PoliceCruiser03_EntryKey
+      PoliceCruiser04_EntryKey     
+      SedanLarge01_EntryKey
+      SedanLarge02_EntryKey      
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 229:  Create child of "VehiclesEntry" add Text tmp: "SedanLarge03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanLarge03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 230: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Sedan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 231: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Sedan_01 => "SedanLarge03"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_03_A
+
+Then move "SedanLarge03" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 232: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 233: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanLarge03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanLarge03Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 234: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: -1.24979 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 235: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.361439
+Front Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.361439
+Rear Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View    
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 236: Add to: SedanLarge03 (SedanLarge03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge03Controller.cs) to "SedanLarge03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanLarge03 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2000
+
+
+-----------------------------------------------------------------------------------
+
+Step 237: Add to: SedanLarge03Camera (SedanLarge03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge03Camera.cs) to "SedanLarge03Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanLarge03: SedanLarge03 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 238: Add to: SedanLarge03 (SedanLarge03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge03Entry.cs) to "SedanLarge03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanLarge03: SedanLarge03
+Player: Player
+InterfaceText Object: SedanLarge03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
+Size: X: 4.003421 Y: 1.174145 Z: 1.925263
+
+
+-----------------------------------------------------------------------------------
+
+Step 239: In "VehiclesSpeed" create empty child: "SedanLarge03Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 240: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanLarge03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 241: In Interface > Canvas > VehiclesSpeed add IMG: "SedanLarge03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 242: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanLarge03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 243: In Vehicles > SedanLarge03 attach script: (SedanLarge03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanLarge03Speedometer script: (SedanLarge03Speedometer.cs) to
+Vehicle: "SedanLarge03"
+
+In: "SedanLarge03" > SedanLarge03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanLarge03_Needle
+
+Speed Text: SedanLarge03_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanLarge03_Speedometer
+Interface IMG01 Object: SedanLarge03_SpeedoGuage
+Interface IMG02 Object: SedanLarge03_SpeedoNeedle
+Interface Text Object: SedanLarge03_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanLarge03Speedometer
+SedanLarge03_SpeedoGuage
+SedanLarge03_SpeedoNeedle
+SedanLarge03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View  
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+Interface     
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge03Camera      
+Interface
+  Canvas
+    VehiclesSpeed
+      Ambulance01Speedometer
+        Ambulance01_SpeedoGuage
+        Ambulance01_SpeedoNeedle
+        Ambulance01_SpeedText  
+      Ambulance02Speedometer
+        Ambulance02_SpeedoGuage
+        Ambulance02_SpeedoNeedle
+        Ambulance02_SpeedText     
+      Ambulance03Speedometer
+        Ambulance03_SpeedoGuage
+        Ambulance03_SpeedoNeedle
+        Ambulance03_SpeedText 
+      Ambulance04Speedometer
+        Ambulance04_SpeedoGuage
+        Ambulance04_SpeedoNeedle
+        Ambulance04_SpeedText     
+      MuscleCar01Speedometer
+        MuscleCar01_SpeedoGuage
+        MuscleCar01_SpeedoNeedle
+        MuscleCar01_SpeedText    
+      MuscleCar02Speedometer
+        MuscleCar02_SpeedoGuage
+        MuscleCar02_SpeedoNeedle
+       MuscleCar02_SpeedText  
+      MuscleCar03Speedometer
+        MuscleCar03_SpeedoGuage
+        MuscleCar03_SpeedoNeedle
+        MuscleCar03_SpeedText   
+      MuscleCar04Speedometer
+        MuscleCar04_SpeedoGuage
+        MuscleCar04_SpeedoNeedle
+        MuscleCar04_SpeedText     
+      PoliceCruiser01Speedometer
+        PoliceCruiser01_SpeedoGuage
+        PoliceCruiser01_SpeedoNeedle
+        PoliceCruiser01_SpeedText    
+      PoliceCruiser02Speedometer
+        PoliceCruiser02_SpeedoGuage
+        PoliceCruiser02_SpeedoNeedle
+        PoliceCruiser02_SpeedText 
+      PoliceCruiser03Speedometer
+        PoliceCruiser03_SpeedoGuage
+        PoliceCruiser03_SpeedoNeedle
+        PoliceCruiser03_SpeedText
+      PoliceCruiser04Speedometer
+        PoliceCruiser04_SpeedoGuage
+        PoliceCruiser04_SpeedoNeedle
+        PoliceCruiser04_SpeedText     
+      SedanLarge01Speedometer
+        SedanLarge01_SpeedoGuage
+        SedanLarge01_SpeedoNeedle
+        SedanLarge01_SpeedText 
+      SedanLarge02Speedometer
+        SedanLarge02_SpeedoGuage
+        SedanLarge02_SpeedoNeedle
+        SedanLarge02_SpeedText
+      SedanLarge03Speedometer
+        SedanLarge03_SpeedoGuage
+        SedanLarge03_SpeedoNeedle
+        SedanLarge03_SpeedText       
+    VehiclesEntry
+      Ambulance01_EntryKey
+      Ambulance02_EntryKey
+      Ambulance03_EntryKey 
+      Ambulance04_EntryKey     
+      MuscleCar01_EntryKey
+      MuscleCar02_EntryKey 
+      MuscleCar03_EntryKey
+      MuscleCar04_EntryKey     
+      PoliceCruiser01_EntryKey
+      PoliceCruiser02_EntryKey
+      PoliceCruiser03_EntryKey
+      PoliceCruiser04_EntryKey     
+      SedanLarge01_EntryKey
+      SedanLarge02_EntryKey
+      SedanLarge03_EntryKey            
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 244:  Create child of "VehiclesEntry" add Text tmp: "SedanLarge04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanLarge04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 245: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Sedan_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 246: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Sedan_01 => "SedanLarge04"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_04_A
+
+Then move "SedanLarge04" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 247: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 248: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanLarge04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanLarge04Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 249: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.361439 Z: -1.24979 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.361439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 250: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheels Collider Radius: 0.361439
+Front Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheels Collider Radius: 0.361439
+Rear Wheels Collider Position Y: 0.511439 (0.361439+0.15)  *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Sedan_Wheel_fl
+SM_Veh_Car_Sedan_Wheel_fr
+SM_Veh_Car_Sedan_Wheel_rl
+SM_Veh_Car_Sedan_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.361439
+Set both rear  "Wheel Colliders" radius: 0.361439
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Sedan_Wheel_fl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_fr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: 1.632266
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rl
+---------------------------
+
+Position: X: -0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Sedan_Wheel_rr
+---------------------------
+
+Position: X: 0.7449768 Y: 0.511439 Z: -1.24979
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View   
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View    
+  SedanLarge04
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge03Camera
+  SedanLarge04
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 251: Add to: SedanLarge04 (SedanLarge04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge04Controller.cs) to "SedanLarge04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanLarge04 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Sedan_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Sedan_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Sedan_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Sedan_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 2000
+
+
+-----------------------------------------------------------------------------------
+
+Step 252: Add to: SedanLarge04Camera (SedanLarge04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge04Camera.cs) to "SedanLarge04Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanLarge04: SedanLarge04 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 253: Add to: SedanLarge04 (SedanLarge04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanLarge04Entry.cs) to "SedanLarge04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanLarge04: SedanLarge04
+Player: Player
+InterfaceText Object: SedanLarge04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to you
+  likings and needs:
+
+Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
+Size: X: 4.003421 Y: 1.174145 Z: 1.925263
+
+
+-----------------------------------------------------------------------------------
+
+Step 254: In "VehiclesSpeed" create empty child: "SedanLarge04Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanLarge04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 255: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanLarge04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 256: In Interface > Canvas > VehiclesSpeed add IMG: "SedanLarge04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 257: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanLarge04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanLarge04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 258: In Vehicles > SedanLarge04 attach script: (SedanLarge04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanLarge04Speedometer script: (SedanLarge04Speedometer.cs) to
+Vehicle: "SedanLarge04"
+
+In: "SedanLarge04" > SedanLarge04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanLarge04_Needle
+
+Speed Text: SedanLarge04_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanLarge04_Speedometer
+Interface IMG01 Object: SedanLarge04_SpeedoGuage
+Interface IMG02 Object: SedanLarge04_SpeedoNeedle
+Interface Text Object: SedanLarge04_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanLarge04Speedometer
+SedanLarge04_SpeedoGuage
+SedanLarge04_SpeedoNeedle
+SedanLarge04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View    
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View   
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW     
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View           
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View    
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View  
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View 
+  SedanLarge04
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08  
+    WheelMeshes
+    WheelColliders   
+    View 
+Interface        
+  Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem
+
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  Ambulance01
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance01Camera
+  Ambulance02
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance02Camera  
+  Ambulance03
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance03Camera 
+  Ambulance04
+    SM_Veh_Car_Ambo_Door_l
+    SM_Veh_Car_Ambo_Door_r
+    SM_Veh_Car_Ambo_Glass
+    SM_Veh_Car_Ambo_Plates
+    SM_Veh_Car_Ambo_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Ambo_Wheel_fl
+      SM_Veh_Car_Ambo_Wheel_fr
+      SM_Veh_Car_Ambo_Wheel_rl
+      SM_Veh_Car_Ambo_Wheel_rr    
+    View
+      Ambulance04Camera 
+  MuscleCar01
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar01Camera
+  MuscleCar02
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar02Camera 
+  MuscleCar03
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar03Camera 
+  MuscleCar04
+    SM_Veh_Car_Muscle_Glass
+    SM_Veh_Car_Muscle_Plates
+    SM_Veh_Car_Muscle_SteeringW 
+    WheelMeshes
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Muscle_Wheel_fl
+      SM_Veh_Car_Muscle_Wheel_fr
+      SM_Veh_Car_Muscle_Wheel_rl
+      SM_Veh_Car_Muscle_Wheel_rr    
+    View
+      MuscleCar04Camera
+  PoliceCruiser01
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser01Camera
+  PoliceCruiser02
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser02Camera
+  PoliceCruiser03
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera      
+  SedanLarge01
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge01Camera
+  SedanLarge02
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge02Camera
+  SedanLarge03
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge03Camera
+  SedanLarge04
+    SM_Veh_Car_Sedan_Glass
+    SM_Veh_Car_Sedan_Plates
+    SM_Veh_Car_Sedan_SteeringW
+    SM_Veh_Steering_Wheel_08
+    WheelMeshes
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Sedan_Wheel_fl
+      SM_Veh_Car_Sedan_Wheel_fr
+      SM_Veh_Car_Sedan_Wheel_rl
+      SM_Veh_Car_Sedan_Wheel_rr   
+    View
+      SedanLarge04Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      Ambulance01Speedometer
+        Ambulance01_SpeedoGuage
+        Ambulance01_SpeedoNeedle
+        Ambulance01_SpeedText  
+      Ambulance02Speedometer
+        Ambulance02_SpeedoGuage
+        Ambulance02_SpeedoNeedle
+        Ambulance02_SpeedText     
+      Ambulance03Speedometer
+        Ambulance03_SpeedoGuage
+        Ambulance03_SpeedoNeedle
+        Ambulance03_SpeedText 
+      Ambulance04Speedometer
+        Ambulance04_SpeedoGuage
+        Ambulance04_SpeedoNeedle
+        Ambulance04_SpeedText     
+      MuscleCar01Speedometer
+        MuscleCar01_SpeedoGuage
+        MuscleCar01_SpeedoNeedle
+        MuscleCar01_SpeedText    
+      MuscleCar02Speedometer
+        MuscleCar02_SpeedoGuage
+        MuscleCar02_SpeedoNeedle
+       MuscleCar02_SpeedText  
+      MuscleCar03Speedometer
+        MuscleCar03_SpeedoGuage
+        MuscleCar03_SpeedoNeedle
+        MuscleCar03_SpeedText   
+      MuscleCar04Speedometer
+        MuscleCar04_SpeedoGuage
+        MuscleCar04_SpeedoNeedle
+        MuscleCar04_SpeedText     
+      PoliceCruiser01Speedometer
+        PoliceCruiser01_SpeedoGuage
+        PoliceCruiser01_SpeedoNeedle
+        PoliceCruiser01_SpeedText    
+      PoliceCruiser02Speedometer
+        PoliceCruiser02_SpeedoGuage
+        PoliceCruiser02_SpeedoNeedle
+        PoliceCruiser02_SpeedText 
+      PoliceCruiser03Speedometer
+        PoliceCruiser03_SpeedoGuage
+        PoliceCruiser03_SpeedoNeedle
+        PoliceCruiser03_SpeedText
+      PoliceCruiser04Speedometer
+        PoliceCruiser04_SpeedoGuage
+        PoliceCruiser04_SpeedoNeedle
+        PoliceCruiser04_SpeedText             
+      SedanLarge01Speedometer
+        SedanLarge01_SpeedoGuage
+        SedanLarge01_SpeedoNeedle
+        SedanLarge01_SpeedText 
+      SedanLarge02Speedometer
+        SedanLarge02_SpeedoGuage
+        SedanLarge02_SpeedoNeedle
+        SedanLarge02_SpeedText
+      SedanLarge03Speedometer
+        SedanLarge03_SpeedoGuage
+        SedanLarge03_SpeedoNeedle
+        SedanLarge03_SpeedText 
+      SedanLarge04Speedometer
+        SedanLarge04_SpeedoGuage
+        SedanLarge04_SpeedoNeedle
+        SedanLarge04_SpeedText              
+    VehiclesEntry
+      Ambulance01_EntryKey
+      Ambulance02_EntryKey
+      Ambulance03_EntryKey 
+      Ambulance04_EntryKey     
+      MuscleCar01_EntryKey
+      MuscleCar02_EntryKey 
+      MuscleCar03_EntryKey
+      MuscleCar04_EntryKey     
+      PoliceCruiser01_EntryKey
+      PoliceCruiser02_EntryKey
+      PoliceCruiser03_EntryKey
+      PoliceCruiser04_EntryKey            
+      SedanLarge01_EntryKey
+      SedanLarge02_EntryKey
+      SedanLarge03_EntryKey 
+      SedanLarge04_EntryKey 
+EventSystem
+
+
 
 ---- WRITING THIS DOCUMENTATION IS STILL IN PROGRESS!!!! ----
 
