@@ -3178,6 +3178,13 @@ Vehicles
     WheelMeshes
     WheelColliders   
     View
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View    
 Interface
   Canvas
     VehiclesSpeed
@@ -3244,6 +3251,22 @@ Vehicles
       SM_Veh_Car_Police_Wheel_rr   
     View
       PoliceCruiser03Camera
+  PoliceCruiser04
+    SM_Veh_Car_Police_Glass
+    SM_Veh_Car_Police_Plates
+    SM_Veh_Car_Police_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Police_Wheel_fl
+      SM_Veh_Car_Police_Wheel_fr
+      SM_Veh_Car_Police_Wheel_rl
+      SM_Veh_Car_Police_Wheel_rr   
+    View
+      PoliceCruiser04Camera      
 Interface
   Canvas
     VehiclesSpeed
@@ -3258,11 +3281,16 @@ Interface
       PoliceCruiser03Speedometer
         PoliceCruiser03_SpeedoGuage
         PoliceCruiser03_SpeedoNeedle
-        PoliceCruiser03_SpeedText           
+        PoliceCruiser03_SpeedText  
+      PoliceCruiser04Speedometer
+        PoliceCruiser04_SpeedoGuage
+        PoliceCruiser04_SpeedoNeedle
+        PoliceCruiser04_SpeedText                 
     VehiclesEntry
       PoliceCruiser01_EntryKey
       PoliceCruiser02_EntryKey
-      PoliceCruiser03_EntryKey             
+      PoliceCruiser03_EntryKey
+      PoliceCruiser04_EntryKey                   
 EventSystem
 
 
