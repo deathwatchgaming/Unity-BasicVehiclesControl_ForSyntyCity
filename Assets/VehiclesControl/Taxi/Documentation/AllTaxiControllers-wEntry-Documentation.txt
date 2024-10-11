@@ -1298,7 +1298,7 @@ Note: Ok, by now your vehicle heirarchy should look like this:
 Mostly Collapsed:
 
 Vehicles
-  Taxi02
+  Taxi01
     SM_Veh_Car_Taxi02_Glass
     SM_Veh_Car_Taxi02_Plates
     SM_Veh_Car_Taxi02_SteeringW 
