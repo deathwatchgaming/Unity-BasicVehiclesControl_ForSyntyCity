@@ -116,9 +116,9 @@ Vehicles Control:
 -----------------
 
 
-* All vehicles in scene with entry in scene setup: (in progress, coming soon!)
+* All vehicles in scene with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Documentation/AllVehicleControllers-wEntry-Documentation.txt
 
-* All vehicles types with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/Documentation/AllController-Types-wEntry-Documentation.txt
+* All vehicles types with entry in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Assets/VehiclesControl/Documentation/AllController-Types-wEntry-Documentation.txt
 
 
 
