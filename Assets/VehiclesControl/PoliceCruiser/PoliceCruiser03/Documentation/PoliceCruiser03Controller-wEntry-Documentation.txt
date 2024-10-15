@@ -734,6 +734,16 @@ Size: X: 4.13833 Y: 1.140519 Z: 1.890623
 -----------------------------------------------------------------------------------
 
 
+Ok, hopefully I covered everything. You should now be able to run around your
+scene with your player and then enter / exit and drive your vehicle around. 
+
+Note: The next and last step would be to now follow the provided scene with
+entry speedometer setup steps to finalize all setups steps.
+
+
+-----------------------------------------------------------------------------------
+
+
 That should about sums it up and should be about it and concludes the basic
 Vehicle Controller manual setup steps. You can now begin to modify such
 further for your specific needs.

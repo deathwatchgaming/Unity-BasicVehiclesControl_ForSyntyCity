@@ -488,6 +488,17 @@ Ambulance03: Ambulance03 (Transform)
 -----------------------------------------------------------------------------------
 
 
+Ok, hopefully I covered everything. You should now be able to drive around your
+scene with your vehicle. 
+
+Note: The next and last step would be to now follow the provided vehicle
+specific controller only in scene setup add speedometer setup steps found via
+the extras folder to finalize all setups steps. 
+
+
+-----------------------------------------------------------------------------------
+
+
 That should about sums it up and should be about it and concludes the basic
 Vehicle Controller manual setup steps. You can now begin to modify such
 further for your specific needs.
