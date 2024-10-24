@@ -43,6 +43,13 @@ namespace VehiclesControl
             [Tooltip("The interface text game object")]
             // GameObject _interfaceTextObject
             [SerializeField] private GameObject _interfaceTextObject;
+
+        // Rigidbody Sleep
+        [Header("Rigidbody Sleep")]
+
+            [Tooltip("The rigidbody sleep wait for seconds duration")]
+            // float duration is 0.0001
+            [SerializeField] private float duration = 0.0001f; 
         
         // Active State
         [Header("Active State")]
@@ -202,8 +209,8 @@ namespace VehiclesControl
                 // _interfaceTextObject SetActive is false
                 _interfaceTextObject.SetActive(false);
                 
-                // StartCoroutine RigidbodySleep
-                StartCoroutine(RigidbodySleep(0.000001f)); 
+                // StartCoroutine RigidbodySleep duration
+                StartCoroutine(RigidbodySleep(duration)); 
 
             } // close if gameObject tag is Player
 
