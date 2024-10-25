@@ -14,7 +14,7 @@ namespace TemporarilyResolve
 		[Header("COG Offset")]
 
 			[Tooltip("Zero out the center of gravity offset in your controller first as this replaces such for now")]
-		    [SerializeField] private float _centreOfGravityOffset = -1f;
+			[SerializeField] private float _centreOfGravityOffset = -1f;
 
 		Rigidbody _rigidbody;
 
