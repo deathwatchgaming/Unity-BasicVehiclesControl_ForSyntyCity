@@ -16,7 +16,7 @@ Zero out: "0" the center of gravity offset in your vehicle controller first
 
 -----------------------------------------------------------------------------------
 
-Step 1: Add to: Each vehicle controller (COGWheelColliderEnabler.cs)
+Step 2: Add to: Each vehicle controller (COGWheelColliderEnabler.cs)
 
 -----------------------------------------------------------------------------------
 
