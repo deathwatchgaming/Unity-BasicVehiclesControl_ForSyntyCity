@@ -299,7 +299,7 @@ namespace VehiclesControl
 			// Take care of speed unit type and max speed
 
 			// float _speed
-			float _speed = _rigidbody.velocity.magnitude;
+			float _speed = _rigidbody.linearVelocity.magnitude;
 
 			// _speedType equals MuscleCar02SpeedType.mph
 			if (_speedType == MuscleCar02SpeedType.mph)
@@ -313,7 +313,7 @@ namespace VehiclesControl
 				if (_speed > _maxSpeed)
 				{
 					// _rigidbody.velocity
-					_rigidbody.velocity = (_maxSpeed/2.23694f) * _rigidbody.velocity.normalized;
+					_rigidbody.linearVelocity = (_maxSpeed/2.23694f) * _rigidbody.linearVelocity.normalized;
 
 				} // close if _speed > _maxSpeed
                         
@@ -331,7 +331,7 @@ namespace VehiclesControl
 				if (_speed > _maxSpeed)
 				{
 					// _rigidbody.velocity
-					_rigidbody.velocity = (_maxSpeed/3.6f) * _rigidbody.velocity.normalized;
+					_rigidbody.linearVelocity = (_maxSpeed/3.6f) * _rigidbody.linearVelocity.normalized;
 
 				} // close if _speed > _maxSpeed
                        

@@ -114,6 +114,20 @@ PlayerControl:
 
 
 
+
+Unity 6 Bug (Related to Wheel Colliders and Center of Gravity Offset)
+----------------------------------------------------------------------
+
+
+NOTE: There is currently a bug in Unity 6 that affects wheel colliders and
+center of gravity offset. This bug has been reported and is listed as a bug
+and is currently being worked on for an official fix. Until such we can
+provide a temporary resolution file to add to your vehicle to sort this out.
+
+
+* Temporary Unity 6 Bug Resolution: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-6/Temporary-Resolution/Unity-6-Temporary-Resolve-Bug.txt
+
+
 Vehicles Control:
 -----------------
 

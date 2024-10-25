@@ -186,7 +186,7 @@ namespace VehiclesControl
 				// 2.23694 is the constant to convert a value from m/s to mph
 
 				// _currentSpeed
-				_currentSpeed = (float)Math.Round(_rigidbody.velocity.magnitude * 2.23694f, _decimalPlaces);
+				_currentSpeed = (float)Math.Round(_rigidbody.linearVelocity.magnitude * 2.23694f, _decimalPlaces);
 
 				// _speedText.text
 				_speedText.text = _previousText + _currentSpeed.ToString() + " mph";
@@ -199,7 +199,7 @@ namespace VehiclesControl
 				// 3.6 is the constant to convert a value from m/s to km/h
 
 				// _currentSpeed
-				_currentSpeed = (float)Math.Round(_rigidbody.velocity.magnitude * 3.6f, _decimalPlaces);
+				_currentSpeed = (float)Math.Round(_rigidbody.linearVelocity.magnitude * 3.6f, _decimalPlaces);
 
 				// _speedText.text
 				_speedText.text = _previousText + _currentSpeed.ToString() + " km/h";

@@ -99,7 +99,7 @@ namespace VehiclesControl
 		private void FixedUpdate()
 		{
 			// Vector3 _localVelocity
-			Vector3 _localVelocity = _sedanMedium01.InverseTransformDirection(_sedanMedium01.GetComponent<Rigidbody>().velocity);
+			Vector3 _localVelocity = _sedanMedium01.InverseTransformDirection(_sedanMedium01.GetComponent<Rigidbody>().linearVelocity);
 			
 			// if
 			if (_localVelocity.z < -0.1f)
@@ -130,7 +130,7 @@ namespace VehiclesControl
 			} // close else
 	        
 			// float acc
-			float _acc = _sedanMedium01.GetComponent<Rigidbody>().velocity.magnitude;
+			float _acc = _sedanMedium01.GetComponent<Rigidbody>().linearVelocity.magnitude;
 
 			// GetComponent Camera fieldOfView
 			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;
