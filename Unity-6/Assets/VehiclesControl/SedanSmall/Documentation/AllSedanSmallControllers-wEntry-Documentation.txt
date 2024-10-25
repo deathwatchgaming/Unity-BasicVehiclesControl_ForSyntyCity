@@ -1,0 +1,3294 @@
+"AllSedanSmallsDevScene-wEntry" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic Vehicle Controller for your Unity projects using vehicle models
+from Synty Polygon City Asset.
+
+Player Controls:
+----------------
+
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
+
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "AllSedanSmallsDevScene-wEntry"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 800 Y: 1     Z: 800
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Mesh Resolution:
+
+Terrain Width: 8000
+Terrain Length: 8000
+
+Modify via:
+
+"Terrain" Inspector: "Transform"
+
+Position: X: -4000 Y: 0 Z: -4000 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: object "Player":
+
+-----------------------------------------------------------------------------------
+
+
+Create empty object and name such: "Player"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.9799998 Z: -10 
+Rotation: X: 0 Y: 0  Z: 0 
+Scale:    X: 1 Y: 1  Z: 1
+
+Add Tag: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Add: empty object "View":
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, create a child of the "Player" object and name
+such: "View"
+
+Transform Position: X: 0 Y: 0 Z: 0
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Add: "Camera":
+
+-----------------------------------------------------------------------------------
+
+In "Player" object, add a Camera component as child of "View" and name
+such: "Camera"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0.6 Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1
+
+Depth: "1" 
+
+Add Tag: "MainCamera"
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Edit: the "CharacterController" component:
+
+-----------------------------------------------------------------------------------
+
+
+In "Player" object, edit the "CharacterController" component:
+
+Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Setup: Audio Source and Footstep Sounds Audio Clips:
+
+-----------------------------------------------------------------------------------
+
+In "Player" object edit: the "First Person Controller (Script)"
+
+Footstep Source: Player (AudioSource)
+
+Footsep Sounds: "4"
+
+Element 0: "Footstep01"
+Element 1: "Footstep02"
+Element 2: "Footstep03"
+Element 3: "Footstep04"
+
+
+That is it! You should now be able to run around your scene!
+
+
+But..., for now since we do not need the player controller at this point let
+us disable the player object / component in inspector for now until we need it
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Create: empty "Interface"
+
+-----------------------------------------------------------------------------------
+
+Create an empty called: "Interface"
+
+Layer: "UI"
+
+Transform: 
+----------
+
+Position: X: 0 Y: 0   Z: 0 
+Rotation: X: 0 Y: 0   Z: 0 
+Scale:    X: 1 Y: 1   Z: 1 
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: In "Interface" Add UI: "Canvas"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" Add a UI: "Canvas"
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Create as child of "Canvas" add empty: "VehiclesEntry"
+
+-----------------------------------------------------------------------------------
+
+
+Create as a child of "Interface" add empty: "VehiclesEntry"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Bottom Center"
+
+Position: X: 0 Y: 50   Z: 0 
+Width: 100
+Height: 100
+
+
+-----------------------------------------------------------------------------------
+
+Step 13:  Create child of "VehiclesEntry" add Text tmp: "SedanSmall01_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanSmall01_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 14: Create: empty "Vehicles"
+
+-----------------------------------------------------------------------------------
+
+
+Now that you disabled the interface, let us go back in your scene heirarchy and...
+
+Create Empty: "Vehicles"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Player
+Vehicle
+Interface
+EventSystem
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon City Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214
+
+
+-----------------------------------------------------------------------------------
+
+Step 15: Install: "Synty Polygon City Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON City - Low Poly 3D Art by Synty.unitypackage
+
+Purchase Synty Polygon City Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214
+
+
+-----------------------------------------------------------------------------------
+
+Step 16: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Small_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 17: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Small_01 => "SedanSmall01"
+
+Next, set the Transform:
+
+Position: X: -9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
+
+Then move "SedanSmall01" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 18: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 19: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanSmall01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanSmall01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 20: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: 1.335427 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 21: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheel Collider Radius: 0.332806
+Front Wheel Collider Position Y: 0.482806 (0.332806+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheel Collider Radius: 0.3328057
+Rear Wheel Collider Position Y: 0.4828057 (0.3328057+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.332806
+Set both rear  "Wheel Colliders" radius: 0.3328057
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 22: Add to: SedanSmall01 (SedanSmall01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall01Controller.cs) to "SedanSmall01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanSmall01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 23: Add to: SedanSmall01Camera (SedanSmall01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall01Camera.cs) to "SedanSmall01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanSmall01: SedanSmall01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 24: Add to: SedanSmall01 (SedanSmall01Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall01Entry.cs) to "SedanSmall01"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanSmall01: SedanSmall01
+Player: Player
+InterfaceText Object: SedanSmall01_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
+Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+-----------------------------------------------------------------------------------
+
+Step 25: In Interface > Canvas create empty child: "VehiclesSpeed"
+
+-----------------------------------------------------------------------------------
+
+
+In: "VehiclesSpeed"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Bottom Left
+
+Pos X: 146.3
+Pos Y: 143
+
+Width: 300
+Height: 300
+
+
+-----------------------------------------------------------------------------------
+
+Step 26: In "VehiclesSpeed" create empty child: "SedanSmall01Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall01Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 27: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanSmall01_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall01_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 28: In Interface > Canvas > VehiclesSpeed add IMG: "SedanSmall01_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall01_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 29: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanSmall01_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall01_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 30: In Vehicle > SedanSmall01 attach script: (SedanSmall01Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanSmall01Speedometer script: (SedanSmall01Speedometer.cs) to
+Vehicle: "SedanSmall01"
+
+In: "SedanSmall01" > SedanSmall01 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanSmall01_Needle
+
+Speed Text: SedanSmall01_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanSmall01_Speedometer
+Interface IMG01 Object: SedanSmall01_SpeedoGuage
+Interface IMG02 Object: SedanSmall01_SpeedoNeedle
+Interface Text Object: SedanSmall01_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanSmall01Speedometer
+SedanSmall01_SpeedoGuage
+SedanSmall01_SpeedoNeedle
+SedanSmall01_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+Interface
+   Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem   
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+Interface
+  Canvas
+    VehiclesSpeed
+      SedanSmall01Speedometer
+       SedanSmall01_SpeedoGuage
+       SedanSmall01_SpeedoNeedle
+       SedanSmall01_SpeedText    
+    VehiclesEntry
+      SedanSmall01_EntryKey
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+Step 31:  Create child of "VehiclesEntry" add Text tmp: "SedanSmall02_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanSmall02_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 32: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Small_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 33: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Small_01 => "SedanSmall02"
+
+Next, set the Transform:
+
+Position: X: -3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_02_A
+
+Then move "SedanSmall02" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 34: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall02" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 35: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanSmall02Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanSmall02Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 36: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall02" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: 1.335427 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 37: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall02" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheel Collider Radius: 0.332806
+Front Wheel Collider Position Y: 0.482806 (0.332806+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheel Collider Radius: 0.3328057
+Rear Wheel Collider Position Y: 0.4828057 (0.3328057+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.332806
+Set both rear  "Wheel Colliders" radius: 0.3328057
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 38: Add to: SedanSmall02 (SedanSmall02Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall02Controller.cs) to "SedanSmall02"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanSmall02 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 39: Add to: SedanSmall02Camera (SedanSmall02Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall02Camera.cs) to "SedanSmall02Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanSmall02: SedanSmall02 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 40: Add to: SedanSmall02 (SedanSmall02Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall02Entry.cs) to "SedanSmall02"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanSmall02: SedanSmall02
+Player: Player
+InterfaceText Object: SedanSmall02_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
+Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+-----------------------------------------------------------------------------------
+
+Step 41: In "VehiclesSpeed" create empty child: "SedanSmall02Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall02Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 42: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanSmall02_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall02_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 43: In Interface > Canvas > VehiclesSpeed add IMG: "SedanSmall02_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall02_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 44: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanSmall02_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall02_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 45: In Vehicles > SedanSmall02 attach script: (SedanSmall02Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanSmall02Speedometer script: (SedanSmall02Speedometer.cs) to
+Vehicle: "SedanSmall02"
+
+In: "SedanSmall02" > SedanSmall02 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanSmall02_Needle
+
+Speed Text: SedanSmall02_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanSmall02_Speedometer
+Interface IMG01 Object: SedanSmall02_SpeedoGuage
+Interface IMG02 Object: SedanSmall02_SpeedoNeedle
+Interface Text Object: SedanSmall02_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanSmall02Speedometer
+SedanSmall02_SpeedoGuage
+SedanSmall02_SpeedoNeedle
+SedanSmall02_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View    
+Interface
+   Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem   
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera      
+Interface
+  Canvas
+    VehiclesSpeed
+      SedanSmall01Speedometer
+       SedanSmall01_SpeedoGuage
+       SedanSmall01_SpeedoNeedle
+       SedanSmall01_SpeedText 
+      SedanSmall02Speedometer
+       SedanSmall02_SpeedoGuage
+       SedanSmall02_SpeedoNeedle
+       SedanSmall02_SpeedText
+    VehiclesEntry
+      SedanSmall01_EntryKey
+      SedanSmall02_EntryKey      
+EventSystem
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 46:  Create child of "VehiclesEntry" add Text tmp: "SedanSmall03_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanSmall03_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 47: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Small_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 48: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Small_01 => "SedanSmall03"
+
+Next, set the Transform:
+
+Position: X: 3 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_03_A
+
+Then move "SedanSmall03" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 49: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall03" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 50: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanSmall03Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanSmall03Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 51: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall03" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: 1.335427 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 52: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall03" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheel Collider Radius: 0.332806
+Front Wheel Collider Position Y: 0.482806 (0.332806+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheel Collider Radius: 0.3328057
+Rear Wheel Collider Position Y: 0.4828057 (0.3328057+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.332806
+Set both rear  "Wheel Colliders" radius: 0.3328057
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall03Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 53: Add to: SedanSmall03 (SedanSmall03Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall03Controller.cs) to "SedanSmall03"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanSmall03 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 54: Add to: SedanSmall03Camera (SedanSmall03Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall03Camera.cs) to "SedanSmall03Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanSmall03: SedanSmall03 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 55: Add to: SedanSmall03 (SedanSmall03Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall03Entry.cs) to "SedanSmall03"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanSmall03: SedanSmall03
+Player: Player
+InterfaceText Object: SedanSmall03_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
+Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+-----------------------------------------------------------------------------------
+
+Step 56: In "VehiclesSpeed" create empty child: "SedanSmall03Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall03Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 57: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanSmall03_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall03_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 58: In Interface > Canvas > VehiclesSpeed add IMG: "SedanSmall03_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall03_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 59: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanSmall03_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall03_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 60: In Vehicles > SedanSmall03 attach script: (SedanSmall03Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanSmall03Speedometer script: (SedanSmall03Speedometer.cs) to
+Vehicle: "SedanSmall03"
+
+In: "SedanSmall03" > SedanSmall03 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanSmall03_Needle
+
+Speed Text: SedanSmall03_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanSmall03_Speedometer
+Interface IMG01 Object: SedanSmall03_SpeedoGuage
+Interface IMG02 Object: SedanSmall03_SpeedoNeedle
+Interface Text Object: SedanSmall03_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanSmall03Speedometer
+SedanSmall03_SpeedoGuage
+SedanSmall03_SpeedoNeedle
+SedanSmall03_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View 
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View        
+Interface
+   Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem   
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall03Camera            
+Interface
+  Canvas
+    VehiclesSpeed
+      SedanSmall01Speedometer
+       SedanSmall01_SpeedoGuage
+       SedanSmall01_SpeedoNeedle
+       SedanSmall01_SpeedText 
+      SedanSmall02Speedometer
+       SedanSmall02_SpeedoGuage
+       SedanSmall02_SpeedoNeedle
+       SedanSmall02_SpeedText
+      SedanSmall03Speedometer
+       SedanSmall03_SpeedoGuage
+       SedanSmall03_SpeedoNeedle
+       SedanSmall03_SpeedText       
+    VehiclesEntry
+      SedanSmall01_EntryKey
+      SedanSmall02_EntryKey
+      SedanSmall03_EntryKey            
+EventSystem
+
+
+
+-----------------------------------------------------------------------------------
+
+Step 61:  Create child of "VehiclesEntry" add Text tmp: "SedanSmall04_EntryKey"
+
+-----------------------------------------------------------------------------------
+
+Create as a child of "VehiclesEntry" add TextMeshPro Text: "SedanSmall04_EntryKey"
+
+Layer: "UI"
+
+
+Rect Transform: 
+---------------
+
+Set at "Top Center"
+
+Position: X: 0 Y: -50   Z: 0 
+Width: 100
+Height: 100
+
+
+Text Input: Drive [E]
+Font Size: 36
+
+Alignment: Center & Middle
+
+Face:
+-----
+Dilate: 0.21
+
+Outline: Yes Thickness: 0.121
+
+Underlay: Yes Softness: 0.522
+
+Note: The face, outline and underlay are merely starting suggestions that you
+can tweak further to your desired likings as well as any other related
+settings of the likes.
+
+Note: Lastly, disable this object as we do not want this to display prior to
+awake or start methods and to do this we will disable this object by default
+and then there is a wrapper in the script that will find the inactive item in
+start thus doing what will be needed. So yeah, make sure to disable this
+object in the editor.
+
+Ok, now that this part is done we can start moving to other setup steps...
+
+
+-----------------------------------------------------------------------------------
+
+Step 62: Identify: the next "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Small_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 63: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Small_01 => "SedanSmall04"
+
+Next, set the Transform:
+
+Position: X: 9 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_04_A
+
+Then move "SedanSmall04" into the empty: "Vehicles" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 64: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall04" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 65: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanSmall04Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanSmall04Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 66: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall04" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: 1.335427 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.3328057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 67: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall04" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheel Collider Radius: 0.332806
+Front Wheel Collider Position Y: 0.482806 (0.332806+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheel Collider Radius: 0.3328057
+Rear Wheel Collider Position Y: 0.4828057 (0.3328057+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Small_Wheel_fl
+SM_Veh_Car_Small_Wheel_fr
+SM_Veh_Car_Small_Wheel_rl
+SM_Veh_Car_Small_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.332806
+Set both rear  "Wheel Colliders" radius: 0.3328057
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Small_Wheel_fl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_fr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.482806 Z: 1.335427
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rl
+---------------------------
+
+Position: X: -0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Small_Wheel_rr
+---------------------------
+
+Position: X: 0.6820144 Y: 0.4828057 Z: -1.213148
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall04
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall03Camera
+  SedanSmall04
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall04Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 68: Add to: SedanSmall04 (SedanSmall04Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall04Controller.cs) to "SedanSmall04"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanSmall04 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Small_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Small_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Small_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Small_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1000
+
+
+-----------------------------------------------------------------------------------
+
+Step 69: Add to: SedanSmall04Camera (SedanSmall04Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall04Camera.cs) to "SedanSmall04Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+SedanSmall04: SedanSmall04 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+Step 70: Add to: SedanSmall04 (SedanSmall04Entry.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanSmall04Entry.cs) to "SedanSmall04"
+
+Adjust the following settings:
+
+
+Game Objects:
+-------------
+
+SedanSmall04: SedanSmall04
+Player: Player
+InterfaceText Object: SedanSmall04_EntryKey
+
+
+In Box Collider:
+----------------
+
+Is Trigger: Yes
+
+Edit Collider: YES!* 
+
+* Edit the collider to be around the vehicle doors makings sure to extend the
+  collider a good bit out away from doors so as to allow for a good trigger
+  zone. Here is just an example that I suggest you tweak further to your
+  likings and needs:
+
+Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
+Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+-----------------------------------------------------------------------------------
+
+Step 71: In "VehiclesSpeed" create empty child: "SedanSmall04Speedometer"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanSmall04Speedometer"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+* something to note on placement: ok, when you add the script later in steps
+  you will notice an option in script settings for setting on choice of
+  either kph or mph in regards to SpeedText output, ok, with taking that into
+  account you can now possibly understand the following note about placement
+  of the interface items specific to such, mkay lets say that these setup
+  steps suggest setting all on the bottom left and that is because we are
+  using mph for the speed text outputdisplay thus such would make sence to
+  have speedometer and speed text on left bottom, but, ok, say you select kph
+  as speed text output, then it just might make sence to set the interface
+  items to the bottom right and that is why these suggestions are mentioned.
+  The choice is yours on that.
+
+
+-----------------------------------------------------------------------------------
+
+Step 72: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanSmall04_SpeedoGuage"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall04_SpeedoGuage"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Width: 300
+Height: 300
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Guage
+
+Color: (Suggested Hex) FFFFFF
+
+
+-----------------------------------------------------------------------------------
+
+Step 73: In Interface > Canvas > VehiclesSpeed add IMG: "SedanSmall04_SpeedoNeedle"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall04_SpeedoNeedle"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -24
+
+Width: 260
+Height: 260
+
+
+In: "Image"
+
+
+Source Image: Speedometer-Needle
+
+Color: (Suggested Hex) 6B3232
+
+
+-----------------------------------------------------------------------------------
+
+Step 74: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanSmall04_SpeedText"
+
+-----------------------------------------------------------------------------------
+
+
+In: "SedanSmall04_SpeedText"
+
+Adjust:
+
+Rect Transform:
+---------------
+
+Middle Center
+
+Pos Y: -120.4
+
+Width: 200
+Height: 50
+
+Text Input:
+-----------
+
+0 mph
+
+
+Font Size: 36 *
+
+Vertex Color: (Suggested Hex) FFFFFF
+
+Alignment: Center Middle
+
+Face:
+Dilate: 0.21 *
+
+Outline: YES
+Thickness: 0.121 *
+
+Underlay: YES
+Dilate: 0.02 *
+Softness: 0.522 *
+
+* Note these are just suggestions for you then to tweak and adjust further to
+  your likings.
+
+
+-----------------------------------------------------------------------------------
+
+Step 75: In Vehicles > SedanSmall04 attach script: (SedanSmall04Speedometer.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach SedanSmall04Speedometer script: (SedanSmall04Speedometer.cs) to
+Vehicle: "SedanSmall04"
+
+In: "SedanSmall04" > SedanSmall04 Speedometer (Script)
+
+Adjust the minimal settings as far as what is min needed: (Needle IMG and
+Speed Text)
+
+Needle: SedanSmall04_Needle
+
+Speed Text: SedanSmall04_SpeedText (Text Mesh Pro UGUI)
+
+GameObjects:
+
+Interface Parent Object: SedanSmall04_Speedometer
+Interface IMG01 Object: SedanSmall04_SpeedoGuage
+Interface IMG02 Object: SedanSmall04_SpeedoNeedle
+Interface Text Object: SedanSmall04_SpeedText
+
+
+
+Note: Lastly,  we need to disable
+the listed objects found below as we do not want these objects to display
+prior to awake or start methods and to do this we will disable this object by
+default and then there is a wrapper in the script that will find the inactive
+item in start thus doing what will be needed. So yeah, make sure to disable
+these objects in the editor.
+
+Game Objects:
+
+SedanSmall04Speedometer
+SedanSmall04_SpeedoGuage
+SedanSmall04_SpeedoNeedle
+SedanSmall04_SpeedText
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your heirarchy should look like this:
+
+Mostly Collapsed:
+
+Environment
+Player
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View 
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View
+  SedanSmall04
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW 
+    WheelMeshes
+    WheelColliders   
+    View             
+Interface
+   Canvas
+    VehiclesSpeed
+    VehiclesEntry
+EventSystem   
+
+Fully Expanded:
+
+Environment
+  Directional Light
+  Terrain
+  Terrain Plane
+Player
+  View
+    Camera
+Vehicles
+  SedanSmall01
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall01Camera
+  SedanSmall02
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall02Camera
+  SedanSmall03
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall03Camera
+  SedanSmall04
+    SM_Veh_Car_Small_Glass
+    SM_Veh_Car_Small_Plates
+    SM_Veh_Car_Small_SteeringW
+    WheelMeshes
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr  
+    WheelColliders
+      SM_Veh_Car_Small_Wheel_fl
+      SM_Veh_Car_Small_Wheel_fr
+      SM_Veh_Car_Small_Wheel_rl
+      SM_Veh_Car_Small_Wheel_rr   
+    View
+      SedanSmall04Camera                  
+Interface
+  Canvas
+    VehiclesSpeed
+      SedanSmall01Speedometer
+       SedanSmall01_SpeedoGuage
+       SedanSmall01_SpeedoNeedle
+       SedanSmall01_SpeedText 
+      SedanSmall02Speedometer
+       SedanSmall02_SpeedoGuage
+       SedanSmall02_SpeedoNeedle
+       SedanSmall02_SpeedText
+      SedanSmall03Speedometer
+       SedanSmall03_SpeedoGuage
+       SedanSmall03_SpeedoNeedle
+       SedanSmall03_SpeedText
+      SedanSmall04Speedometer
+       SedanSmall04_SpeedoGuage
+       SedanSmall04_SpeedoNeedle
+       SedanSmall04_SpeedText 
+    VehiclesEntry
+      SedanSmall01_EntryKey
+      SedanSmall02_EntryKey
+      SedanSmall03_EntryKey
+      SedanSmall04_EntryKey                  
+EventSystem
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sums it up and should be about it and concludes the basic
+All SedanSmall Vehicle Controllers in scene manual setup steps. You can now
+begin to modify such further for your specific needs.
+
+Best of Luck!

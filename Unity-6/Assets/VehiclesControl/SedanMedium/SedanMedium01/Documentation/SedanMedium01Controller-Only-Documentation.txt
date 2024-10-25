@@ -1,0 +1,503 @@
+"SedanMedium01DevScene" Scene Setup Steps
+-----------------------------------------------------------------------------------
+
+Description:
+
+Create a basic Vehicle Controller for your Unity projects using vehicle models
+from Synty Polygon City Asset.
+
+Vehicle Controls: 
+-----------------
+
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+
+Manual Setup Instruction:
+-------------------------
+
+* Simply follow the instruction for manual setup found below.
+
+
+-----------------------------------------------------------------------------------
+
+Prep Step: Create New Scene Called: "SedanMedium01DevScene"
+
+Note: if you already have some sort of a test terrain in place, well then, you
+can simple skip the steps: #1, 2 & 3 and go directly to #4.
+
+-----------------------------------------------------------------------------------
+
+Step 1: Create: "Environment" * (for Nicer Organization)
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Environment"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+First since this is just a "holder" added for better organization, let us go
+ahead & drag the "Directional Light" into "Environment".
+
+* also if you wanted you could add a "dir" called Environment and opt to place
+  your TerrainData inside that in its own Dir "TerrainData" and as such any
+  other Environment stuff respectively in as desired the "Environment" dir.
+  Just a suggestion.
+
+Also: We don't need the "Main Camera" in Sample Scene, so..., we can go ahead
+and delete it.
+
+
+-----------------------------------------------------------------------------------
+
+Step 2: Create: "Terrain Plane"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Plane"
+
+Position: X: 0   Y: -0.03 Z: 0 
+Rotation: X: 0   Y: 0     Z: 0 
+Scale:    X: 100 Y: 1     Z: 100
+
+Rename to: "Terrain Plane"
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain Plane" into the holder "Environment" we added for just this exact
+ purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 3: Create: "Terrain"
+
+-----------------------------------------------------------------------------------
+
+
+Create New 3D Object: "Terrain"
+
+Modify via:
+
+"Terrain" Inspector: Terrain Settings
+
+Position: X: -500 Y: 0 Z: -500 
+Rotation: X: 0     Y: 0 Z: 0 
+Scale:    X: 1     Y: 1 Z: 1
+
+We can now opt to clean up for better organization, simply drag the:
+"Terrain" into the holder "Environment" we added for just this exact purpose!
+
+
+-----------------------------------------------------------------------------------
+
+Step 4: Create: empty "Vehicle"
+
+-----------------------------------------------------------------------------------
+
+
+Create Empty: "Vehicle"
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your scene heirarchy at top should look like this:
+
+Environment
+Vehicle
+
+
+Nice and organized right?! :) Good Stuff! ;)
+
+Note: as this uses a vehicle from such and due to licensing such vehicles
+cannot be included in this repository obviously, as such the provided scripts
+and instructions thus require having / purchasing the:
+
+Synty Polygon City Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214
+
+
+-----------------------------------------------------------------------------------
+
+Step 5: Install: "Synty Polygon City Asset"
+
+-----------------------------------------------------------------------------------
+
+
+Depending on how you purchased you can either use the package manager to
+install the asset or if you are like me and say already have local repository
+storage of purchased assets and have the package already you can install the
+asset manually.
+
+Asset package to install:
+
+ POLYGON City - Low Poly 3D Art by Synty.unitypackage
+
+
+Purchase Synty Polygon City Asset:
+
+https://assetstore.unity.com/packages/3d/environments/urban/polygon-city-low-poly-3d-art-by-synty-95214
+
+
+-----------------------------------------------------------------------------------
+
+Step 6: Identify: the "Vehicle Prefab"
+
+-----------------------------------------------------------------------------------
+
+
+Let us first identify and locate the "Vehicle Prefab" we are going to use.
+
+Assets > PolygonCity > Prefabs > Vehicles
+
+SM_Veh_Car_Medium_01
+
+
+-----------------------------------------------------------------------------------
+
+Step 7: Add: the "Vehicle Prefab" to Scene
+
+-----------------------------------------------------------------------------------
+
+
+Drag the mentioned "Vehicle Prefab" into the scene & unpack the prefab completely.
+
+Next, rename the vehicle prefabs:
+
+SM_Veh_Car_Medium_01 => "SedanMedium01"
+
+Next, set the Transform:
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Material: PolygonCity_Mat_01_A
+
+Then move "SedanMedium01" into the empty: "Vehicle" as child of.
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add: empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanMedium01" add empty as child named "View"
+
+Set the Transform of "View":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 9: Add: "Camera" in empty "View" as child
+
+-----------------------------------------------------------------------------------
+
+
+In the empty: "View" add "Camera" component named: "SedanMedium01Camera"
+
+Tag: Untagged
+
+Depth: 0
+
+Set the Transform of "SedanMedium01Camera":
+
+Position: X: 0 Y: 1.4 Z: -6.4 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 10: Add: empty "WheelMeshes" as child
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanMedium01" add empty as child named "WheelMeshes"
+
+Set the Transform of "WheelMeshes":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+Copy & paste the following meshes into "WheelMeshes" as children
+(delete originals after as they are not needed since we copied them into new
+location)
+
+SM_Veh_Armored_Car_Wheel_fl
+SM_Veh_Armored_Car_Wheel_fr
+SM_Veh_Armored_Car_Wheel_rl
+SM_Veh_Armored_Car_Wheel_rr
+
+Transforms should be fine and unaffected but, let us just mention them for
+good measure.
+
+
+SM_Veh_Car_Medium_Wheel_fl
+---------------------------
+
+Position: X: -0.7690811 Y: 0.4186304 Z: 1.500103
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_fr
+---------------------------
+
+Position: X: 0.7690811 Y: 0.4186304 Z: 1.500103
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_rl
+---------------------------
+
+Position: X: -0.7690811 Y: 0.4186304 Z: -1.442807
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_rr
+---------------------------
+
+Position: X: 0.7690811 Y: 0.4186304 Z: -1.442807
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Step 11: Duplicate: empty "WheelMeshes" as "WheelColliders"
+
+-----------------------------------------------------------------------------------
+
+
+In "SedanMedium01" duplicate "WheelMeshes" & rename to "WheelColliders"
+
+Set the Transform of "WheelColliders":
+
+Position: X: 0 Y: 0 Z: 0 
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+Since you duplicated "WheelMeshes" & renamed to "WheelColliders" there should
+be the children already present with matching infos...
+
+SM_Veh_Car_Medium_Wheel_fl
+SM_Veh_Car_Medium_Wheel_fr
+SM_Veh_Car_Medium_Wheel_rl
+SM_Veh_Car_Medium_Wheel_rr
+
+
+Prior to the deletion of contents in WheelColliders if you desired to
+determine the wheel radius so as to eventually use with Wheel Colliders well,
+you could attach a Sphere Collider and gain Radius from that and then delete
+the sphere collider after as such would no longer be necessary but instead to
+avoid needing to do such I will provide that info so you do not necessarily
+need to do so.
+
+These details are important:
+
+
+Front Wheels:
+-------------
+
+Front Wheel Collider Radius: 0.4186304
+Front Wheel Collider Position Y: 0.5686304 (0.4186304+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+Rear Wheels:
+------------
+
+Rear Wheel Collider Radius: 0.4186304
+Rear Wheel Collider Position Y: 0.5686304 (0.4186304+0.15) *
+
+* Wheel colliders need +0.15 on the Y to function as intended as per
+  documentation
+
+In "WheelColliders" children: * (since all are already present in WheelMeshes
+and not needed for Wheel Colliders)
+
+* Delete Mesh Filter
+* Delete Mesh Renderer
+
+Add Component "Wheel Collider" to each:
+
+SM_Veh_Car_Medium_Wheel_fl
+SM_Veh_Car_Medium_Wheel_fr
+SM_Veh_Car_Medium_Wheel_rl
+SM_Veh_Car_Medium_Wheel_rr
+
+Set both front "Wheel Colliders" radius: 0.4186304
+Set both rear  "Wheel Colliders" radius: 0.4186304
+
+We will need to now edit these infos:
+
+
+SM_Veh_Car_Medium_Wheel_fl
+---------------------------
+
+Position: X: -0.7690811 Y: 0.5686304 Z: 1.500103
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_fr
+---------------------------
+
+Position: X: 0.7690811 Y: 0.5686304 Z: 1.500103
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_rl
+---------------------------
+
+Position: X: -0.7690811 Y: 0.5686304 Z: -1.442807
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+SM_Veh_Car_Medium_Wheel_rr
+---------------------------
+
+Position: X: 0.7690811 Y: 0.5686304 Z: -1.442807
+Rotation: X: 0 Y: 0 Z: 0 
+Scale:    X: 1 Y: 1 Z: 1
+
+
+-----------------------------------------------------------------------------------
+
+Notes: Current Summary
+
+-----------------------------------------------------------------------------------
+
+
+Note: Ok, by now your vehicle heirarchy should look like this:
+
+Mostly Collapsed:
+
+Vehicle
+  SedanMedium01
+    SM_Veh_Car_Medium_Glass
+    SM_Veh_Car_Medium_Plates
+    SM_Veh_Car_Medium_SteeringW  
+    WheelMeshes
+    WheelColliders   
+    View
+
+Fully Expanded:
+
+Vehicle
+  SedanMedium01
+    SM_Veh_Car_Medium_Glass
+    SM_Veh_Car_Medium_Plates
+    SM_Veh_Car_Medium_SteeringW  
+    WheelMeshes
+      SM_Veh_Car_Medium_Wheel_fl
+      SM_Veh_Car_Medium_Wheel_fr
+      SM_Veh_Car_Medium_Wheel_rl
+      SM_Veh_Car_Medium_Wheel_rr
+    WheelColliders
+      SM_Veh_Car_Medium_Wheel_fl
+      SM_Veh_Car_Medium_Wheel_fr
+      SM_Veh_Car_Medium_Wheel_rl
+      SM_Veh_Car_Medium_Wheel_rr   
+    View
+      SedanMedium01Camera
+
+
+-----------------------------------------------------------------------------------
+
+Step 12: Add to: SedanMedium01 (SedanMedium01Controller.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanMedium01Controller.cs) to "SedanMedium01"
+
+Adjust the following settings:
+
+Require Components:
+-------------------
+
+Rigidbody: SedanMedium01 (Rigidbody)
+
+Wheel Transforms:
+-----------------
+
+Front Left: SM_Veh_Car_Medium_Wheel_fl (Transform)
+Front Right: SM_Veh_Car_Medium_Wheel_fr (Transform)
+Rear Left: SM_Veh_Car_Medium_Wheel_rl (Transform)
+Rear Right: SM_Veh_Car_Medium_Wheel_rr (Transform)
+
+WheelColliders:
+---------------
+
+Front Left: SM_Veh_Car_Medium_Wheel_fl (Wheel Collider)
+Front Right: SM_Veh_Car_Medium_Wheel_fr (Wheel Collider)
+Rear Left: SM_Veh_Car_Medium_Wheel_rl (Wheel Collider)
+Rear Right: SM_Veh_Car_Medium_Wheel_rr (Wheel Collider)
+
+In Rigidbody:
+-------------
+
+Set Rigibody Mass: 1500
+
+-----------------------------------------------------------------------------------
+
+Step 13: Add to: SedanMedium01Camera (SedanMedium01Camera.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Attach component / script (SedanMedium01Camera.cs) to "SedanMedium01Camera"
+
+
+Adjust Settings:
+
+Transforms:
+-----------
+
+Sedan Medium: SedanMedium01 (Transform)
+
+
+-----------------------------------------------------------------------------------
+
+
+Ok, hopefully I covered everything. You should now be able to drive around your
+scene with your vehicle. 
+
+Note: The next and last step would be to now follow the provided vehicle
+specific controller only in scene setup add speedometer setup steps found via
+the extras folder to finalize all setups steps. 
+
+
+-----------------------------------------------------------------------------------
+
+
+That should about sums it up and should be about it and concludes the basic
+Vehicle Controller manual setup steps. You can now begin to modify such
+further for your specific needs.
+
+Best of Luck!
