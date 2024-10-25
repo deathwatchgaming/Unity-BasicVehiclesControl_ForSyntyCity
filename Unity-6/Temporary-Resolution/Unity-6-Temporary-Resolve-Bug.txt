@@ -1,0 +1,32 @@
+NOTE: There is currently a bug in Unity 6 that affects wheel colliders and
+center of gravity offset. This bug has been reported and is listed as a bug
+and is currently being worked on for an official fix. Until such we can
+provide a temporary resolution file to add to your vehicle to sort this out.
+
+
+-----------------------------------------------------------------------------------
+
+Step 1: Modify in: Each vehicle controller (Center of Gravity Offset)
+
+-----------------------------------------------------------------------------------
+
+
+Zero out: "0" the center of gravity offset in your vehicle controller first
+
+
+-----------------------------------------------------------------------------------
+
+Step 1: Add to: Each vehicle controller (COGWheelColliderEnabler.cs)
+
+-----------------------------------------------------------------------------------
+
+
+Make sure that you Zeroed out: "0" the center of gravity offset in your
+vehicle controller first as this temp resolution script replaces such for
+now
+
+Next, Add: COGWheelColliderEnabler.cs script to each vehicle
+
+Next, Add just one of any one of the wheel colliders for the vehicle to the
+script input for wheel collider
+
