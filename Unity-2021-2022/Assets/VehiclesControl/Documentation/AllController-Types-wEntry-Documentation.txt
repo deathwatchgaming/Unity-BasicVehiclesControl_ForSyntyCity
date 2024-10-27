@@ -2248,6 +2248,13 @@ Transforms:
 Van01: Van01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 64: Add to: Van01 (Van01Entry.cs)
@@ -2690,6 +2697,13 @@ Transforms:
 -----------
 
 Ambulance: Ambulance01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3160,6 +3174,13 @@ Transforms:
 -----------
 
 PoliceCruiser: PoliceCruiser01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3651,6 +3672,13 @@ Transforms:
 -----------
 
 Taxi: Taxi01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4165,6 +4193,13 @@ Transforms:
 -----------
 
 SedanLarge: SedanLarge01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4702,6 +4737,13 @@ Transforms:
 -----------
 
 MuscleCar: MuscleCar01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -5263,6 +5305,13 @@ Transforms:
 -----------
 
 SedanMedium: SedanMedium01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -5846,6 +5895,13 @@ Transforms:
 -----------
 
 SedanSmall: SedanSmall01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

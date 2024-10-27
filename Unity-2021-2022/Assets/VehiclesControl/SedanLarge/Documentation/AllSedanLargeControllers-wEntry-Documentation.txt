@@ -706,6 +706,13 @@ Transforms:
 SedanLarge01: SedanLarge01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: SedanLarge01 (SedanLarge01Entry.cs)
@@ -1413,6 +1420,13 @@ Transforms:
 -----------
 
 SedanLarge02: SedanLarge02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2154,6 +2168,13 @@ Transforms:
 -----------
 
 SedanLarge03: SedanLarge03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2950,6 +2971,13 @@ Transforms:
 -----------
 
 SedanLarge04: SedanLarge04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

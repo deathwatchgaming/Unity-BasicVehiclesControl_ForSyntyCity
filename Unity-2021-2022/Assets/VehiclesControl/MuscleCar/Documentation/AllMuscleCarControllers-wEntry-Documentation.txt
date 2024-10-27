@@ -704,6 +704,13 @@ Transforms:
 MuscleCar01: MuscleCar01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: MuscleCar01 (MuscleCar01Entry.cs)
@@ -1404,6 +1411,13 @@ Transforms:
 -----------
 
 MuscleCar02: MuscleCar02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2134,6 +2148,13 @@ Transforms:
 -----------
 
 MuscleCar03: MuscleCar03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2915,6 +2936,13 @@ Transforms:
 -----------
 
 MuscleCar04: MuscleCar04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

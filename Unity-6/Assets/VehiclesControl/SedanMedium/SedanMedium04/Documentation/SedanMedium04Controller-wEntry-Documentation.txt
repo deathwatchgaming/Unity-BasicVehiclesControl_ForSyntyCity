@@ -696,6 +696,13 @@ Transforms:
 SedanMedium04: SedanMedium04 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: SedanMedium04 (SedanMedium04Entry.cs)

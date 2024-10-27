@@ -710,6 +710,13 @@ Transforms:
 Ambulance01: Ambulance01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: Ambulance01 (Ambulance01Entry.cs)
@@ -1423,6 +1430,13 @@ Transforms:
 -----------
 
 Ambulance02: Ambulance02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2173,6 +2187,13 @@ Transforms:
 -----------
 
 Ambulance03: Ambulance03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2983,6 +3004,13 @@ Transforms:
 -----------
 
 Ambulance04: Ambulance04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

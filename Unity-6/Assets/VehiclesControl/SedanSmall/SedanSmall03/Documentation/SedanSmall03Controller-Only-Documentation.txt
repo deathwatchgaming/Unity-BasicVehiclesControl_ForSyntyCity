@@ -481,6 +481,13 @@ Transforms:
 Sedan Small: SedanSmall03 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 

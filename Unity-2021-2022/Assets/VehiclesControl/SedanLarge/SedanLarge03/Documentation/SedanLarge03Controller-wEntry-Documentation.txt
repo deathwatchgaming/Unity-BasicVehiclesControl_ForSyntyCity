@@ -697,6 +697,13 @@ Transforms:
 SedanLarge03: SedanLarge03 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: SedanLarge03 (SedanLarge03Entry.cs)

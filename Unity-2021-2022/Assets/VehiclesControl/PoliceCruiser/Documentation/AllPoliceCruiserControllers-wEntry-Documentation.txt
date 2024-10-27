@@ -704,6 +704,13 @@ Transforms:
 PoliceCruiser01: PoliceCruiser01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: PoliceCruiser01 (PoliceCruiser01Entry.cs)
@@ -1407,6 +1414,13 @@ Transforms:
 -----------
 
 PoliceCruiser02: PoliceCruiser02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2140,6 +2154,13 @@ Transforms:
 -----------
 
 PoliceCruiser03: PoliceCruiser03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2924,6 +2945,13 @@ Transforms:
 -----------
 
 PoliceCruiser04: PoliceCruiser04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

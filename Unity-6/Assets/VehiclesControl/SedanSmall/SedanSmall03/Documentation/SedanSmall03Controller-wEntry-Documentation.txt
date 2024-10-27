@@ -695,6 +695,13 @@ Transforms:
 SedanSmall03: SedanSmall03 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: SedanSmall03 (SedanSmall03Entry.cs)

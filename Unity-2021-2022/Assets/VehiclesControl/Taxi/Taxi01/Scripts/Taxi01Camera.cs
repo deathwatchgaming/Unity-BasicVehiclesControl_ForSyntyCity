@@ -3,6 +3,7 @@
  * Name: Taxi01Camera.cs
  * Author: DeathwatchGaming
  * License: MIT
+ * Unity Version(s): Unity 2021+ - 2022+
  */
 
 // using
@@ -129,11 +130,11 @@ namespace VehiclesControl
 
 			} // close else
 	        
-			// float acc
-			float _acc = _taxi01.GetComponent<Rigidbody>().velocity.magnitude;
+			// float autoCamControl
+			float _autoCamControl = _taxi01.GetComponent<Rigidbody>().velocity.magnitude;
 
 			// GetComponent Camera fieldOfView
-			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _acc * _zoomRatio * Time.deltaTime;
+			GetComponent<Camera>().fieldOfView = _defaultFieldOfView + _autoCamControl * _zoomRatio * Time.deltaTime;
 		
 		} // close private void FixedUpdate
 

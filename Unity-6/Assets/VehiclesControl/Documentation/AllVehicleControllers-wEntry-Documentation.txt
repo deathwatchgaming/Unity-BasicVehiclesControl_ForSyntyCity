@@ -710,6 +710,13 @@ Transforms:
 Ambulance01: Ambulance01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: Ambulance01 (Ambulance01Entry.cs)
@@ -1423,6 +1430,13 @@ Transforms:
 -----------
 
 Ambulance02: Ambulance02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2173,6 +2187,13 @@ Transforms:
 -----------
 
 Ambulance03: Ambulance03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2983,6 +3004,13 @@ Transforms:
 -----------
 
 Ambulance04: Ambulance04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -3847,6 +3875,13 @@ Transforms:
 -----------
 
 MuscleCar01: MuscleCar01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -4785,6 +4820,13 @@ Transforms:
 -----------
 
 MuscleCar02: MuscleCar02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -5751,6 +5793,13 @@ Transforms:
 -----------
 
 MuscleCar03: MuscleCar03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -6768,6 +6817,13 @@ Transforms:
 -----------
 
 MuscleCar04: MuscleCar04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -7836,6 +7892,13 @@ Transforms:
 -----------
 
 PoliceCruiser01: PoliceCruiser01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -8981,6 +9044,13 @@ Transforms:
 -----------
 
 PoliceCruiser02: PoliceCruiser02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -10154,6 +10224,13 @@ Transforms:
 -----------
 
 PoliceCruiser03: PoliceCruiser03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -11378,6 +11455,13 @@ Transforms:
 -----------
 
 PoliceCruiser04: PoliceCruiser04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -12655,6 +12739,13 @@ Transforms:
 -----------
 
 SedanLarge01: SedanLarge01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -14008,6 +14099,13 @@ Transforms:
 -----------
 
 SedanLarge02: SedanLarge02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -15393,6 +15491,13 @@ Transforms:
 -----------
 
 SedanLarge03: SedanLarge03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -16833,6 +16938,13 @@ Transforms:
 -----------
 
 SedanLarge04: SedanLarge04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -18328,6 +18440,13 @@ Transforms:
 -----------
 
 SedanMedium01: SedanMedium01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -19896,6 +20015,13 @@ Transforms:
 -----------
 
 SedanMedium02: SedanMedium02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -21492,6 +21618,13 @@ Transforms:
 -----------
 
 SedanMedium03: SedanMedium03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -23139,6 +23272,13 @@ Transforms:
 -----------
 
 SedanMedium04: SedanMedium04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -24836,6 +24976,13 @@ Transforms:
 -----------
 
 SedanSmall01: SedanSmall01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -26606,6 +26753,13 @@ Transforms:
 -----------
 
 SedanSmall02: SedanSmall02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -28404,6 +28558,13 @@ Transforms:
 -----------
 
 SedanSmall03: SedanSmall03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -30253,6 +30414,13 @@ Transforms:
 -----------
 
 SedanSmall04: SedanSmall04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -32154,6 +32322,13 @@ Transforms:
 -----------
 
 Taxi01: Taxi01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -34128,6 +34303,13 @@ Transforms:
 -----------
 
 Taxi02: Taxi02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -36130,6 +36312,13 @@ Transforms:
 -----------
 
 Taxi03: Taxi03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -38184,6 +38373,13 @@ Transforms:
 -----------
 
 Taxi04: Taxi04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -40292,6 +40488,13 @@ Transforms:
 -----------
 
 Van01: Van01 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -42484,6 +42687,13 @@ Transforms:
 -----------
 
 Van02: Van02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -44712,6 +44922,13 @@ Transforms:
 -----------
 
 Van03: Van03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -46999,6 +47216,13 @@ Transforms:
 -----------
 
 Van04: Van04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------

@@ -708,6 +708,13 @@ Transforms:
 Van01: Van01 (Transform)
 
 
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
+
+
 -----------------------------------------------------------------------------------
 
 Step 24: Add to: Van01 (Van01Entry.cs)
@@ -1421,6 +1428,13 @@ Transforms:
 -----------
 
 Van02: Van02 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2172,6 +2186,13 @@ Transforms:
 -----------
 
 Van03: Van03 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
@@ -2982,6 +3003,13 @@ Transforms:
 -----------
 
 Van04: Van04 (Transform)
+
+
+You can keep settings as is or tweak them to your likings! *
+
+* ie: (tweak camera height)
+
+Height: 3.16
 
 
 -----------------------------------------------------------------------------------
