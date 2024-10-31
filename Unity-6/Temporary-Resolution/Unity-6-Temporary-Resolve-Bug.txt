@@ -1,7 +1,12 @@
-NOTE: There is currently a bug in Unity 6 that affects wheel colliders and
-center of gravity offset. This bug has been reported and is listed as a bug
-and is currently being worked on for an official fix. Until such we can
-provide a temporary resolution file to add to your vehicle to sort this out.
+NOTE: There is currently a bug in Unity 6 prior to Fixed in Unity 6
+(6000.025f1) that affects wheel colliders and center of gravity offset. This
+bug has been reported and is listed as a bug and is currently being worked on
+for an official fix. Until such we can provide a temporary resolution file to
+add to your vehicle to sort this out.
+
+
+ATTENTION!!: This bug has been fixed in Unity 6 (6000.025f1) thus this
+temporary resolution is not needed if you upgrade to that version!
 
 
 -----------------------------------------------------------------------------------
