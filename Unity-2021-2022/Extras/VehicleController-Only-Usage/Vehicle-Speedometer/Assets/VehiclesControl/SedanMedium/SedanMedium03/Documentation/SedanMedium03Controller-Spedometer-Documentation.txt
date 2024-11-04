@@ -1,4 +1,4 @@
-SedanMedium04 Speedometer Setup Steps:
+SedanMedium03 Speedometer Setup Steps:
 -------------------------------------
 
 
@@ -49,11 +49,11 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 2: In "VehiclesSpeed" create empty child: "SedanMedium04Speedometer"
+Step 2: In "VehiclesSpeed" create empty child: "SedanMedium03Speedometer"
 
 -----------------------------------------------------------------------------------
 
-In: "SedanMedium04Speedometer"
+In: "SedanMedium03Speedometer"
 
 Adjust:
 
@@ -80,12 +80,12 @@ Height: 300
 
 -----------------------------------------------------------------------------------
 
-Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanMedium04_SpeedoGuage"
+Step 3: In Interface > Canvas > VehiclesSpeed add UI IMG: "SedanMedium03_SpeedoGuage"
 
 -----------------------------------------------------------------------------------
 
 
-In: "SedanMedium04_SpeedoGuage"
+In: "SedanMedium03_SpeedoGuage"
 
 Adjust:
 
@@ -108,12 +108,12 @@ Color: (Suggested Hex) FFFFFF
 
 -----------------------------------------------------------------------------------
 
-Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "SedanMedium04_SpeedoNeedle"
+Step 4: In Interface > Canvas > VehiclesSpeed add IMG: "SedanMedium03_SpeedoNeedle"
 
 -----------------------------------------------------------------------------------
 
 
-In: "SedanMedium04_SpeedoNeedle"
+In: "SedanMedium03_SpeedoNeedle"
 
 Adjust:
 
@@ -139,12 +139,12 @@ Color: (Suggested Hex) 6B3232
 
 -----------------------------------------------------------------------------------
 
-Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanMedium04_SpeedText"
+Step 5: In Interface > Canvas > VehiclesSpeed add TMP TEXT: "SedanMedium03_SpeedText"
 
 -----------------------------------------------------------------------------------
 
 
-In: "SedanMedium04_SpeedText"
+In: "SedanMedium03_SpeedText"
 
 Adjust:
 
@@ -186,22 +186,22 @@ Softness: 0.522 *
 
 -----------------------------------------------------------------------------------
 
-Step 6: In Vehicle > SedanMedium04 attach script: (SedanMedium04Speedometer.cs)
+Step 6: In Vehicle > SedanMedium03 attach script: (SedanMedium03Speedometer.cs)
 
 -----------------------------------------------------------------------------------
 
 
-Attach SedanMedium04Speedometer script: (SedanMedium04Speedometer.cs) to
-Vehicle: "SedanMedium04"
+Attach SedanMedium03Speedometer script: (SedanMedium03Speedometer.cs) to
+Vehicle: "SedanMedium03"
 
-In: "SedanMedium04" > SedanMedium04 Speedometer (Script)
+In: "SedanMedium03" > SedanMedium03 Speedometer (Script)
 
 Adjust the minimal settings as far as what is min needed: (Needle IMG and
 Speed Text)
 
-Needle: SedanMedium04_Needle
+Needle: SedanMedium03_Needle
 
-Speed Text: SedanMedium04_SpeedText (Text Mesh Pro UGUI)
+Speed Text: SedanMedium03_SpeedText (Text Mesh Pro UGUI)
 
 
 -----------------------------------------------------------------------------------
