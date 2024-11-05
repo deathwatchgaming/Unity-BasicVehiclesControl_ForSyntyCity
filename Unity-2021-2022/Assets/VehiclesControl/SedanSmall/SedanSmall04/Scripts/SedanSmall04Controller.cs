@@ -161,6 +161,12 @@ namespace VehiclesControl
 
 			// _meshCollider convex
 			_meshCollider.convex = true;
+
+			// Cursor lockState is CursorLockMode Locked
+			Cursor.lockState = CursorLockMode.Locked;
+
+			// Cursor visible is false
+			Cursor.visible = false;
 	        
 		} // close private void Awake
 
