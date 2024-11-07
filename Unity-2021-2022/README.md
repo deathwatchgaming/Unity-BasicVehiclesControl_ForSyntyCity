@@ -479,6 +479,17 @@ Vehicles with entry:
 * Ambulance 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance04-Individual-Compass-Documentation.txt
 
 
+Vehicles without entry:
+
+* Ambulance 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance01-Controller-Only-Compass-Documentation.txt
+
+* Ambulance 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance02-Controller-Only-Compass-Documentation.txt
+
+* Ambulance 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance03-Controller-Only-Compass-Documentation.txt
+
+* Ambulance 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance04-Controller-Only-Compass-Documentation.txt
+
+
 Muscle Car:
 
 Vehicles with entry:
@@ -490,6 +501,18 @@ Vehicles with entry:
 * Muscle Car 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar03-Individual-Compass-Documentation.txt
 
 * Muscle Car 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar04-Individual-Compass-Documentation.txt
+
+
+Vehicles without entry:
+
+* Muscle Car 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar01-Controller-Only-Compass-Documentation.txt
+
+* Muscle Car 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar02-Controller-Only-Compass-Documentation.txt
+
+* Muscle Car 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar03-Controller-Only-Compass-Documentation.txt
+
+* Muscle Car 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar04-Controller-Only-Compass-Documentation.txt
+
 
 
 Police Cruiser:
@@ -505,6 +528,18 @@ Vehicles with entry:
 * Police Charger 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Individual-Compass-Documentation.txt
 
 
+Vehicles without entry:
+
+* Police Cruiser 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCruiser/Documentation/PoliceCruiser01-Controller-Only-Compass-Documentation.txt
+
+* Police Cruiser 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCruiser/Documentation/PoliceCruiser02-Controller-Only-Compass-Documentation.txt
+
+* Police Cruiser 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCruiser/Documentation/PoliceCruiser03-Controller-Only-Compass-Documentation.txt
+
+* Police Cruiser 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCruiser/Documentation/PoliceCruiser04-Controller-Only-Compass-Documentation.txt
+
+
+
 Sedan Large:
 
 Vehicles with entry:
@@ -516,6 +551,19 @@ Vehicles with entry:
 * Sedan Large 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge03-Individual-Compass-Documentation.txt
 
 * Sedan Large 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge04-Individual-Compass-Documentation.txt
+
+
+Vehicles without entry:
+
+* Sedan Large 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge01-Controller-Only-Compass-Documentation.txt
+
+* Sedan Large 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge02-Controller-Only-Compass-Documentation.txt
+
+* Sedan Large 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge03-Controller-Only-Compass-Documentation.txt
+
+* Sedan Large 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge04-Controller-Only-Compass-Documentation.txt
+
+
 
 
 Sedan Medium:
@@ -531,6 +579,18 @@ Vehicles with entry:
 * Sedan Medium 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium04-Individual-Compass-Documentation.txt
 
 
+Vehicles without entry:
+
+* Sedan Medium 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium01-Controller-Only-Compass-Documentation.txt
+
+* Sedan Medium 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium02-Controller-Only-Compass-Documentation.txt
+
+* Sedan Medium 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium03-Controller-Only-Compass-Documentation.txt
+
+* Sedan Medium 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium04-Controller-Only-Compass-Documentation.txt
+
+
+
 Sedan Small:
 
 Vehicles with entry:
@@ -542,6 +602,18 @@ Vehicles with entry:
 * Sedan Small 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall03-Individual-Compass-Documentation.txt
 
 * Sedan Small 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall04-Individual-Compass-Documentation.txt
+
+
+Vehicles without entry:
+
+* Sedan Small 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall01-Controller-Only-Compass-Documentation.txt
+
+* Sedan Small 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall02-Controller-Only-Compass-Documentation.txt
+
+* Sedan Small 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall03-Controller-Only-Compass-Documentation.txt
+
+* Sedan Small 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall04-Controller-Only-Compass-Documentation.txt
+
 
 
 Taxi:
@@ -557,6 +629,17 @@ Vehicles with entry:
 * Taxi 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi04-Individual-Compass-Documentation.txt
 
 
+Vehicles without entry:
+
+* Taxi 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi01-Controller-Only-Compass-Documentation.txt
+
+* Taxi 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi02-Controller-Only-Compass-Documentation.txt
+
+* Taxi 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi03-Controller-Only-Compass-Documentation.txt
+
+* Taxi 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi04-Controller-Only-Compass-Documentation.txt
+
+
 Van:
 
 Vehicles with entry:
@@ -570,5 +653,14 @@ Vehicles with entry:
 * Van 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van04-Individual-Compass-Documentation.txt
 
 
+Vehicles without entry:
+
+* Van 01 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van01-Controller-Only-Compass-Documentation.txt
+
+* Van 02 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van02-Controller-Only-Compass-Documentation.txt
+
+* Van 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van03-Controller-Only-Compass-Documentation.txt
+
+* Van 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van04-Controller-Only-Compass-Documentation.txt
 
 
