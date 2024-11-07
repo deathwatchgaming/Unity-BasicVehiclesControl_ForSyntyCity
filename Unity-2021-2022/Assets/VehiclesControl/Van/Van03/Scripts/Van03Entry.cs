@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -93,9 +94,24 @@ namespace VehiclesControl
 
         } // close GameObject FindInActiveObjectByName
 
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The van 03 compass")]
+            // Van03Compass _van03Compass
+            [SerializeField] private Van03Compass _van03Compass;  
+
+        //public static Van03Entry _van03Entry;
+
         // private void Start
         private void Start() 
         {
+            //_van03Entry = this;
+            
             // _van03Script is GetComponent Van03Controller
             _van03Script = GetComponent<Van03Controller>();
 
@@ -122,6 +138,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _van03Compass enabled is false
+            _van03Compass.enabled = false;
+
+            // _van03Compass compassEnabled is false
+            _van03Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Van03 compass is disabled");
 
         } // close private void Start
 
@@ -150,6 +186,26 @@ namespace VehiclesControl
 
                 // _inVan03 is false
                 _inVan03 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _van03Compass enabled is false
+                _van03Compass.enabled = false;
+
+                // _van03Compass compassEnabled is false
+                _van03Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Van03 compass is disabled");         
 
             } // close if _inVan03 and Input GetKey KeyCode _exitKey
 
@@ -189,6 +245,26 @@ namespace VehiclesControl
 
                 // _inVan03 is true
                 _inVan03 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _van03Compass enabled is true
+                _van03Compass.enabled = true;
+
+                // _van03Compass compassEnabled is true
+                _van03Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Van03 compass is enabled");                
 
             } // close if not _inVan03 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

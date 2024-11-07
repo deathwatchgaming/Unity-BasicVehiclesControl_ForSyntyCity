@@ -48415,7 +48415,19 @@ Interface
 EventSystem
 
 
+
 -----------------------------------------------------------------------------------
+
+Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
+finalize the setup steps!
+
+Ok, hopefully I covered everything. After completion of those steps you should
+then be able to run around your scene with your player and then enter / exit
+and drive your vehicles around and see your direction by player and vehicles
+compass.
+
+------------------------------------------------------------------------------------
+
 
 
 That should about sum it up and should be about it and concludes the basic All

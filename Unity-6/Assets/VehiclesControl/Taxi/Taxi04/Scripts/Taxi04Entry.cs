@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The taxi 04 compass")]
+            // Taxi04Compass _taxi04Compass
+            [SerializeField] private Taxi04Compass _taxi04Compass;  
+
+        //public static Taxi04Entry _taxi04Entry;
         
         // private void Start
         private void Start() 
         {
+            //_taxi04Entry = this;
+
             // _taxi04Script is GetComponent Taxi04Controller
             _taxi04Script = GetComponent<Taxi04Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _taxi04Compass enabled is false
+            _taxi04Compass.enabled = false;
+
+            // _taxi04Compass compassEnabled is false
+            _taxi04Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Taxi04 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inTaxi04 is false
                 _inTaxi04 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _taxi04Compass enabled is false
+                _taxi04Compass.enabled = false;
+
+                // _taxi04Compass compassEnabled is false
+                _taxi04Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Taxi04 compass is disabled");         
 
             } // close if _inTaxi04 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inTaxi04 is true
                 _inTaxi04 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _taxi04Compass enabled is true
+                _taxi04Compass.enabled = true;
+
+                // _taxi04Compass compassEnabled is true
+                _taxi04Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Taxi04 compass is enabled");                
 
             } // close if not _inTaxi04 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The muscle car 04 compass")]
+            // MuscleCar04Compass _muscleCar04Compass
+            [SerializeField] private MuscleCar04Compass _muscleCar04Compass;  
+
+        //public static MuscleCar04Entry _muscleCar04Entry;
         
         // private void Start
         private void Start() 
         {
+            //_muscleCar04Entry = this;
+
             // _muscleCar04Script is GetComponent MuscleCar04Controller
             _muscleCar04Script = GetComponent<MuscleCar04Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _muscleCar04Compass enabled is false
+            _muscleCar04Compass.enabled = false;
+
+            // _muscleCar04Compass compassEnabled is false
+            _muscleCar04Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The MuscleCar04 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inMuscleCar04 is false
                 _inMuscleCar04 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _muscleCar04Compass enabled is false
+                _muscleCar04Compass.enabled = false;
+
+                // _muscleCar04Compass compassEnabled is false
+                _muscleCar04Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The MuscleCar04 compass is disabled");         
 
             } // close if _inMuscleCar04 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inMuscleCar04 is true
                 _inMuscleCar04 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _muscleCar04Compass enabled is true
+                _muscleCar04Compass.enabled = true;
+
+                // _muscleCar04Compass compassEnabled is true
+                _muscleCar04Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The MuscleCar04 compass is enabled");                
 
             } // close if not _inMuscleCar04 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

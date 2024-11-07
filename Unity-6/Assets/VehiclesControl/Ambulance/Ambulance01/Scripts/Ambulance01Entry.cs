@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
-        
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The ambulance 01 compass")]
+            // Ambulance01Compass _ambulance01Compass
+            [SerializeField] private Ambulance01Compass _ambulance01Compass;  
+
+        //public static Ambulance01Entry _ambulance01Entry;
+
         // private void Start
         private void Start() 
         {
+            //_ambulance01Entry = this;
+
             // _ambulance01Script is GetComponent Ambulance01Controller
             _ambulance01Script = GetComponent<Ambulance01Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+            
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _ambulance01Compass enabled is false
+            _ambulance01Compass.enabled = false;
+
+            // _ambulance01Compass compassEnabled is false
+            _ambulance01Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Ambulance01 compass is disabled");
 
     	} // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inAmbulance01 is false
                 _inAmbulance01 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _ambulance01Compass enabled is false
+                _ambulance01Compass.enabled = false;
+
+                // _ambulance01Compass compassEnabled is false
+                _ambulance01Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Ambulance01 compass is disabled");         
 
             } // close if _inAmbulance01 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inAmbulance01 is true
                 _inAmbulance01 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _ambulance01Compass enabled is true
+                _ambulance01Compass.enabled = true;
+
+                // _ambulance01Compass compassEnabled is true
+                _ambulance01Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Ambulance01 compass is enabled");                
 
             } // close if not _inAmbulance01 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 

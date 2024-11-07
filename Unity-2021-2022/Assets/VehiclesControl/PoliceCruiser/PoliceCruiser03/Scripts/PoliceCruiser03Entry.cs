@@ -9,6 +9,7 @@
 // using
 using UnityEngine;
 using System.Collections;
+using NavigationControl;
 
 // namespace VehiclesControl
 namespace VehiclesControl
@@ -99,10 +100,25 @@ namespace VehiclesControl
             return null;
 
         } // close GameObject FindInActiveObjectByName
+
+        // Compass
+        [Header("Compass")]
+
+            [Tooltip("The player compass")]
+            // PlayerCompass _playerCompass
+            [SerializeField] private PlayerCompass _playerCompass;
+            
+            [Tooltip("The police cruiser 03 compass")]
+            // PoliceCruiser03Compass _cruiser03Compass
+            [SerializeField] private PoliceCruiser03Compass _cruiser03Compass;  
+
+        //public static PoliceCruiser03Entry _policeCruiser03Entry;
                 
         // private void Start
         private void Start() 
         {
+            //_policeCruiser03Entry = this;
+            
             // _policeCruiser03Script is GetComponent PoliceCruiser03Controller
             _policeCruiser03Script = GetComponent<PoliceCruiser03Controller>();
 
@@ -129,6 +145,26 @@ namespace VehiclesControl
 
             // _interfaceTextObject SetActive is false
             _interfaceTextObject.SetActive(false);
+
+            // Compass
+
+            // _playerCompass enabled is true
+            _playerCompass.enabled = true;
+
+            // _playerCompass compassEnabled is true
+            _playerCompass.compassEnabled = true;
+
+            // Debug Log
+            //Debug.Log("The Player compass is enabled");
+
+            // _cruiser03Compass enabled is false
+            _cruiser03Compass.enabled = false;
+
+            // _cruiser03Compass compassEnabled is false
+            _cruiser03Compass.compassEnabled = false;
+
+            // Debug Log
+            //Debug.Log("The Cruiser03 compass is disabled");
 
         } // close private void Start
 
@@ -157,6 +193,26 @@ namespace VehiclesControl
 
                 // _inPoliceCruiser03 is false
                 _inPoliceCruiser03 = false;
+
+                // Compass
+
+                // _playerCompass enabled is true
+                _playerCompass.enabled = true;
+
+                // _playerCompass compassEnabled is true 
+                _playerCompass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Player compass is enabled");
+
+                // _cruiser03Compass enabled is false
+                _cruiser03Compass.enabled = false;
+
+                // _cruiser03Compass compassEnabled is false
+                _cruiser03Compass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Cruiser03 compass is disabled");         
 
             } // close if _inPoliceCruiser03 and Input GetKey KeyCode _exitKey
 
@@ -196,6 +252,26 @@ namespace VehiclesControl
 
                 // _inPoliceCruiser03 is true
                 _inPoliceCruiser03 = true;
+
+                // Compass
+
+                // _playerCompass enabled is false
+                _playerCompass.enabled = false;
+
+                // _playerCompass compassEnabled is false
+                _playerCompass.compassEnabled = false;
+
+                // Debug Log
+                //Debug.Log("The Player compass is disabled"); 
+
+                // _cruiser03Compass enabled is true
+                _cruiser03Compass.enabled = true;
+
+                // _cruiser03Compass compassEnabled is true
+                _cruiser03Compass.compassEnabled = true;
+
+                // Debug Log
+                //Debug.Log("The Cruiser03 compass is enabled");                
 
             } // close if not _inPoliceCruiser03 and gameObject tag is Player and Input GetKey KeyCode _enterKey
 
