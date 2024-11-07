@@ -502,7 +502,22 @@ the documentation folder ie:
 
 SedanLarge02Controller-Only-Speedometer-Documentation 
 
-to finalize all setups steps  
+to finalize all setups steps.  
+
+
+-----------------------------------------------------------------------------------
+
+Optional: (Controller only) Compass Usage
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, if you would like to have the compass for controller only usage
+you need to next follow the Vehicle Compass (Controller Only) setup steps to
+finalize that part of the setup steps found via the NavigationControl
+specific vehicle directory documentation folder ie:
+
+SedanLarge02-Controller-Only-Compass-Documentation
 
 
 -----------------------------------------------------------------------------------

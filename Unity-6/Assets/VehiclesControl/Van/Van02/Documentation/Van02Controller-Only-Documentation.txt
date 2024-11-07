@@ -506,6 +506,21 @@ to finalize all setups steps.
 
 -----------------------------------------------------------------------------------
 
+Optional: (Controller only) Compass Usage
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, if you would like to have the compass for controller only usage
+you need to next follow the Vehicle Compass (Controller Only) setup steps to
+finalize that part of the setup steps found via the NavigationControl
+specific vehicle directory documentation folder ie:
+
+Van02-Controller-Only-Compass-Documentation
+
+
+-----------------------------------------------------------------------------------
+
 
 That should about sums it up and should be about it and concludes the basic
 Vehicle Controller manual setup steps. You can now begin to modify such
