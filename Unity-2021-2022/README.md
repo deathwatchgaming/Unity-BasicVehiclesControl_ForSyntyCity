@@ -446,6 +446,8 @@ All vehicles with entry:
 
 * All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
+* All Vehicles types in scene with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-2-Documentation.txt
+
 * All Ambulances with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Compass-Documentation.txt
 
 * All Muscle Cars with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/Compass-Documentation.txt

@@ -5989,8 +5989,8 @@ SedanSmall01_SpeedText
 
 -----------------------------------------------------------------------------------
 
-Note: Lastly, you need to next follow the Player and Vehicles Compass setup steps to
-finalize the setup steps!
+Note: Lastly, you need to next follow the All Vehicle types in scene Player
+and Vehicles Compass setup steps to finalize the setup steps!
 
 Ok, hopefully I covered everything. After completion of those steps you should
 then be able to run around your scene with your player and then enter / exit
