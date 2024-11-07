@@ -442,7 +442,7 @@ Player and Vehicles Compass:
 ----------------------------
 
 
-All with entry:
+All vehicles with entry:
 
 * All Vehicles with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Documentation/Compass-Documentation.txt
 
@@ -461,3 +461,114 @@ All with entry:
 * All Taxis with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Compass-Documentation.txt
 
 * All Vans with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Compass-Documentation.txt
+
+
+Individual Vehicles:
+
+Ambulance:
+
+Vehicles with entry:
+
+
+* Ambulance 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance01-Individual-Compass-Documentation.txt
+
+* Ambulance 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance02-Individual-Compass-Documentation.txt
+
+* Ambulance 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance03-Individual-Compass-Documentation.txt
+
+* Ambulance 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Ambulance/Documentation/Ambulance04-Individual-Compass-Documentation.txt
+
+
+Muscle Car:
+
+Vehicles with entry:
+
+* Muscle Car 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar01-Individual-Compass-Documentation.txt
+
+* Muscle Car 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar02-Individual-Compass-Documentation.txt
+
+* Muscle Car 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar03-Individual-Compass-Documentation.txt
+
+* Muscle Car 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/MuscleCar/Documentation/MuscleCar04-Individual-Compass-Documentation.txt
+
+
+Police Cruiser:
+
+Vehicles with entry:
+
+* Police Charger 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger01-Individual-Compass-Documentation.txt
+
+* Police Charger 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger02-Individual-Compass-Documentation.txt
+
+* Police Charger 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger03-Individual-Compass-Documentation.txt
+
+* Police Charger 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/PoliceCharger/Documentation/PoliceCharger04-Individual-Compass-Documentation.txt
+
+
+Sedan Large:
+
+Vehicles with entry:
+
+* Sedan Large 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge01-Individual-Compass-Documentation.txt
+
+* Sedan Large 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge02-Individual-Compass-Documentation.txt
+
+* Sedan Large 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge03-Individual-Compass-Documentation.txt
+
+* Sedan Large 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanLarge/Documentation/SedanLarge04-Individual-Compass-Documentation.txt
+
+
+Sedan Medium:
+
+Vehicles with entry:
+
+* Sedan Medium 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium01-Individual-Compass-Documentation.txt
+
+* Sedan Medium 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium02-Individual-Compass-Documentation.txt
+
+* Sedan Medium 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium03-Individual-Compass-Documentation.txt
+
+* Sedan Medium 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanMedium/Documentation/SedanMedium04-Individual-Compass-Documentation.txt
+
+
+Sedan Small:
+
+Vehicles with entry:
+
+* Sedan Small 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall01-Individual-Compass-Documentation.txt
+
+* Sedan Small 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall02-Individual-Compass-Documentation.txt
+
+* Sedan Small 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall03-Individual-Compass-Documentation.txt
+
+* Sedan Small 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/SedanSmall/Documentation/SedanSmall04-Individual-Compass-Documentation.txt
+
+
+Taxi:
+
+Vehicles with entry:
+
+* Taxi 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi01-Individual-Compass-Documentation.txt
+
+* Taxi 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi02-Individual-Compass-Documentation.txt
+
+* Taxi 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi03-Individual-Compass-Documentation.txt
+
+* Taxi 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Taxi/Documentation/Taxi04-Individual-Compass-Documentation.txt
+
+
+Van:
+
+Vehicles with entry:
+
+* Van 01 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van01-Individual-Compass-Documentation.txt
+
+* Van 02 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van02-Individual-Compass-Documentation.txt
+
+* Van 03 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van03-Individual-Compass-Documentation.txt
+
+* Van 04 with entry Player and Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyHeist/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van04-Individual-Compass-Documentation.txt
+
+
+
+
