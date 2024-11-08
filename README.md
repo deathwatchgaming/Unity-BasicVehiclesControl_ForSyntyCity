@@ -46,6 +46,16 @@ Vehicles Currently "Completed" & Included:
 * SedanMedium (100% completed)
 * SedanSmall (100% completed)
 
+
+
+Other Currently "Completed" & Included:
+---------------------------------------
+
+
+* Player & Vehicles Compass
+
+
+ 
  
 Other Current Possibles "In Progress" & Not Yet Included:
 ---------------------------------------------------------
