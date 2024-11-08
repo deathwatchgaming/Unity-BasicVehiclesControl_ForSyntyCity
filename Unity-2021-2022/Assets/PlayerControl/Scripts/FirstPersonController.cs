@@ -3,6 +3,7 @@
  * File: FirstPersonController.cs
  * Author(s): DeathwatchGaming
  * License: MIT
+ * Unity Version(s): Unity 2021+ - 2022+
 */
 
 // Player Transform Position: X: 0 Y: 0.9799998 Z: 0 / Tag: Player
