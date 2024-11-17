@@ -175,6 +175,106 @@ Okay, your "Final Heirarchy" should look as follows:
 --- Traffic_Cone_Round_02
 
 
+Another option: Next, add some side barriers
+-------------------------------------------------
+
+
+As child of: "Driving_Test_Barriers"
+
+
+Create Empty: "Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+Then s a child of: "Barriers", create Empty: "Left_Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+As child of "Left_Barriers" add prop:
+
+
+Assets / PolygonCity / Prefabs / Props:
+
+
+SM_Prop_Barrier_01
+
+
+Make sure to now unpack the prefab completely...
+
+Duplicate: (x41)
+
+
+Start:
+
+Barrier_Left_01
+
+X: 100 Y: 0 Z: 10
+
+Add: Rigidbody
+
+
+ie: Duplicate through 01 - 41
+
+setting X: @ 5 apart
+
+
+End:
+
+Barrier_Left_41
+
+X: -100 Y: 0 Z: 10
+
+Add: Rigidbody
+
+
+Then, as a child of: "Barriers", create Empty: "Right_Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+
+As child of "Right_Barriers" add prop:
+
+
+Assets / PolygonCity / Prefabs / Props:
+
+
+SM_Prop_Barrier_01
+
+
+Make sure to now unpack the prefab completely...
+
+
+Duplicate: (x41)
+
+
+Start:
+
+
+Barrier_Right_01
+
+X: 100 Y: 0 Z: -10
+
+Add: Rigidbody
+
+
+ie: Duplicate through 01 - 41
+
+setting X: @ 5 apart
+
+
+End:
+
+
+Barrier_Right_41
+
+X: -100 Y: 0 Z: -10
+
+Add: Rigidbody
+
+
 Mkay, you should now be able to drive around and weave in an out around the cones trying not to say knock the cones over for example say like in a "driving test".
 
 
