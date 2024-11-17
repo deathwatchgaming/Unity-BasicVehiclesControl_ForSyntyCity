@@ -5,7 +5,7 @@ Simply create for your vehicle Dev Scene(s): a "Driving Test Barriers"
 Create Empty: "Driving_Test_Barriers"
 
 
-X: 0 Y: 0 Z: 64
+X: 0 Y: 0 Z: 60
 
 
 Creaty Empty: "Traffic_Cones"
