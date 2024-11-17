@@ -698,3 +698,12 @@ Vehicles without entry:
 * Van 03 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van03-Controller-Only-Compass-Documentation.txt
 
 * Van 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-6/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van04-Controller-Only-Compass-Documentation.txt
+
+
+
+Driving Test Barriers:
+----------------------
+
+* Simply create for your vehicle Dev Scene(s): a "Driving Test Barriers" in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-6/Assets/VehiclesControl/Documentation/Create-Driving-Test-Barriers.txt
+
+

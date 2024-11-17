@@ -111,6 +111,7 @@ Entry Script:
 * Enter Vehicle:    E
 * Exit Vehicle:     F
 
+
 Manual Setup Instruction:
 -------------------------
 
@@ -676,4 +677,10 @@ Vehicles without entry:
 
 * Van 04 without entry Vehicle Compass setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/NavigationControl/Compass/Scripts/Van/Documentation/Van04-Controller-Only-Compass-Documentation.txt
 
+
+
+Driving Test Barriers:
+----------------------
+
+* Simply create for your vehicle Dev Scene(s): a "Driving Test Barriers" in scene setup: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-2021-2022/Assets/VehiclesControl/Documentation/Create-Driving-Test-Barriers.txt
 
