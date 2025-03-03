@@ -217,6 +217,15 @@ namespace NavigationControl
 				// Case 270 break			
 				break;
 
+				// Case	is 315		
+				case 315:
+
+					// Compass direction text is North West
+					_compassDirection.text = "NW";
+
+				// Case 315 break			
+				break;
+				
 				// Case is default			
 				default:
 
