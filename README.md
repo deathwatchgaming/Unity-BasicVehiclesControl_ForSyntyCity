@@ -29,7 +29,9 @@ Synty City Vehicles (total: 32)
 Release Intentions Note:
 ------------------------
 
+
 The intention of these releases due to only being scripts for usage with models one must already own or opt to purchase and as such was known that one could not release such models with the package here the intent was to provide basic vehicle functionality as a start point as fully functional in terms of an opinion of basic but leave out optional continuances in the hopes that these will be used as starting points for folks to continue on with and improve upon. Now, some of the things intentionally left out, umm, while all simply easy to add, lets see: say, audio sources, audio clips, particle systems for exhausts as leaving these initializations of such aforementioned suggestions out was indeed intentional in the hopes that the end user will continue to add those as desired and continue to improve upon the provided start points. Also note that while yes, these are great hints, tips and or suggestions, if you were thinking say of what to add next, please note though, that is not to say if and or when I may find myself to have free time say I just may or may not opt to add such or some of such at later dates if desire or free time allows. Another thing to note is that I intentionally left out adding a fuel system to these at this time because again the intent was to provide basic functional vehicle controllers as starting points. 
+
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ & Unity 6
 
@@ -40,6 +42,7 @@ or both is enabled in project settings.
 
 Vehicles Currently "Completed" & Included:
 ------------------------------------------
+
 
 * Ambulance (100% completed)
 * PoliceCruiser (100% completed)
@@ -63,6 +66,7 @@ Other Currently "Completed" & Included:
  
 Other Current Possibles "In Progress" & Not Yet Included:
 ---------------------------------------------------------
+
 
 Possible future additions: (if and or when my limited free time and desire may allow)
 
@@ -118,6 +122,7 @@ Entry Script:
 
 Manual Setup Instruction:
 -------------------------
+
 
 Simply follow the linkages found below  for documentation information / instruction respective to the version say for example either Unity 2021+ & Unity 2022+ or Unity 6....
 
