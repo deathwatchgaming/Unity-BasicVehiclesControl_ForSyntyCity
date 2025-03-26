@@ -25,6 +25,10 @@ Manual Setup Instruction:
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
 
+NOTE: This currently still uses the Old Input System, so as such depending on
+what version of Unity you may be using it may be necessary to make sure such
+or both is enabled in project settings.
+
 
 -----------------------------------------------------------------------------------
 
