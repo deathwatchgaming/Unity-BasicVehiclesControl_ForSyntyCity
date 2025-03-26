@@ -33,6 +33,10 @@ The intention of these releases due to only being scripts for usage with models 
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ & Unity 6
 
+NOTE: This currently still uses the Old Input System, so as such depending on
+what version of Unity you may be using it may be necessary to make sure such
+or both is enabled in project settings.
+
 
 Vehicles Currently "Completed" & Included:
 ------------------------------------------
