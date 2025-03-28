@@ -88,6 +88,12 @@ Player Controls:
   Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
 
 
+New_Input_System:
+
+
+* coming soon...
+
+
 Old_Input_System:
 
 
@@ -104,6 +110,12 @@ Vehicle Controls:
 
 
   Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
+
+
+New_Input_System:
+
+
+* coming soon...
 
 
 Old_Input_System:  
@@ -131,6 +143,14 @@ Manual Setup Instruction:
 
 
 Simply follow the linkages found below  for documentation information / instruction respective to the version say for example either Unity 2021+ & Unity 2022+ or Unity 6....
+
+
+New_Input_System:
+
+
+* coming soon...
+
+
 
 
 Old_Input_System:
