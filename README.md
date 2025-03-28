@@ -88,6 +88,9 @@ Player Controls:
   Note: The following found below are related to the provided playercontrol script for usage example if say using vehicle entry script.
 
 
+Old_Input_System:
+
+
 * Player Forward:   W
 * Player Reverse:   S
 * Player Left:      A
@@ -101,6 +104,9 @@ Vehicle Controls:
 
 
   Note: The following below are related to both variations either standalone vehicle controller usage and entry script usage.
+
+
+Old_Input_System:  
 
 
 * Vehicle Forward:  W
@@ -127,8 +133,11 @@ Manual Setup Instruction:
 Simply follow the linkages found below  for documentation information / instruction respective to the version say for example either Unity 2021+ & Unity 2022+ or Unity 6....
 
 
-* Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/tree/main/Unity-2021-2022
+Old_Input_System:
 
 
-* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Unity-6
+* Unity 20221+ & 2022+ => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/tree/main/Old_Input_System/Unity-2021-2022
+
+
+* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/Old_Input_System/Unity-6
 
