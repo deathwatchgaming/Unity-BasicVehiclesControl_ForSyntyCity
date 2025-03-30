@@ -110,7 +110,7 @@ namespace VehiclesControl
             
             [Tooltip("The sedan medium 04 compass")]
             // SedanMedium04Compass _sedanMD04Compass
-            [SerializeField] private SedanMedium01Compass _sedanMD04Compass;  
+            [SerializeField] private SedanMedium04Compass _sedanMD04Compass;  
 
         //public static SedanMedium04Entry _sedanMedium04Entry;
         
