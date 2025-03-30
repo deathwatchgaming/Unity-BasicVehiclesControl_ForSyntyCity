@@ -131,7 +131,7 @@ namespace VehiclesControl
 
 			[Tooltip("The input action asset")]
 			// InputActionAsset _carControls
-		    [SerializeField] private InputActionAsset _carControls;
+			[SerializeField] private InputActionAsset _carControls;
 
 		// InputAction _moveAction
 		private InputAction _moveAction;
@@ -314,7 +314,7 @@ namespace VehiclesControl
 			if (_brakeValue)
 			{
 				// _currentBrakeForce is _brakingForce
-			    _currentBrakeForce = _brakingForce;
+				_currentBrakeForce = _brakingForce;
 				
 			} // close if input _brakeValue
 	        

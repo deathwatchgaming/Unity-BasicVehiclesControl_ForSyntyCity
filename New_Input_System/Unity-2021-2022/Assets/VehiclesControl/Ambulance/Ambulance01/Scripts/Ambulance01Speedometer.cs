@@ -95,23 +95,23 @@ namespace VehiclesControl
 			// bool _inAmbulance01 is false
 			[SerializeField] private bool _inAmbulance01 = false;
 
-        // Input Actions
-        [Header("Input Actions")] 
+		// Input Actions
+		[Header("Input Actions")] 
 
-            [Tooltip("The input action asset")]
-            [SerializeField] private InputActionAsset _carControls;
+			[Tooltip("The input action asset")]
+			[SerializeField] private InputActionAsset _carControls;
 
-        // InputAction _carEnterAction
-        private InputAction _carEnterAction;
+		// InputAction _carEnterAction
+		private InputAction _carEnterAction;
 
-        // InputAction _carExitAction
-        private InputAction _carExitAction;
+		// InputAction _carExitAction
+		private InputAction _carExitAction;
 
-        // bool _enterButton
-        private bool _enterButton;
+		// bool _enterButton
+		private bool _enterButton;
 
-        // bool _exitButton
-        private bool _exitButton;
+		// bool _exitButton
+		private bool _exitButton;
 
 		// float _currentSpeed
 		float _currentSpeed;
@@ -152,37 +152,37 @@ namespace VehiclesControl
 		} // close GameObject FindInActiveObjectByName
 
         // private void Awake
-        private void Awake()
-        {
-        	// _carEnterAction
-            _carEnterAction = _carControls.FindActionMap("Car").FindAction("Enter");
+		private void Awake()
+		{
+			// _carEnterAction
+			_carEnterAction = _carControls.FindActionMap("Car").FindAction("Enter");
 
-            // _carExitAction
-            _carExitAction = _carControls.FindActionMap("Car").FindAction("Exit");
+			// _carExitAction
+			_carExitAction = _carControls.FindActionMap("Car").FindAction("Exit");
 
-        } // close private void Awake
+		} // close private void Awake
 
-        // private void OnEnable
-        private void OnEnable()
-        {
-        	// _carEnterAction Enable
-            _carEnterAction.Enable();
+		// private void OnEnable
+		private void OnEnable()
+		{
+			// _carEnterAction Enable
+			_carEnterAction.Enable();
 
-            // _carExitAction Enable 
-            _carExitAction.Enable();
+			// _carExitAction Enable 
+			_carExitAction.Enable();
 
-        } // close private void OnEnable
+		} // close private void OnEnable
 
-        // private void OnDisable
-        private void OnDisable()
-        {
-        	// _carEnterAction Disable
-            _carEnterAction.Disable();
+		// private void OnDisable
+		private void OnDisable()
+		{
+			// _carEnterAction Disable
+			_carEnterAction.Disable();
 
-            // _carExitAction Disable
-            _carExitAction.Disable();  
+			// _carExitAction Disable
+			_carExitAction.Disable();  
 
-        } // close private void OnDisable
+		} // close private void OnDisable
 
 		// private void Start
 		private void Start()
@@ -223,26 +223,26 @@ namespace VehiclesControl
 		private void Update()
 		{
             // if_carEnterAction triggered
-            if (_carEnterAction.triggered)
-            {
-                // _enterButton is true
-                _enterButton = true;
+			if (_carEnterAction.triggered)
+			{
+				// _enterButton is true
+				_enterButton = true;
 
-                // _exitButton is false
-                _exitButton = false;
+				// _exitButton is false
+				_exitButton = false;
 
-            } // close if_carEnterAction triggered
+			} // close if_carEnterAction triggered
 
-            // if _carExitAction triggered
-            if (_carExitAction.triggered)
-            {
-                // _enterButton is false
-                _enterButton = false;
+			// if _carExitAction triggered
+			if (_carExitAction.triggered)
+			{
+				// _enterButton is false
+				_enterButton = false;
 
-                // _exitButton is true
-                _exitButton = true;
+				// _exitButton is true
+				_exitButton = true;
 
-            } // close if _carExitAction triggered
+			} // close if _carExitAction triggered
 
 			// if _speedUnit equals Ambulance01SpeedUnit.mph
 			if (_speedUnit == Ambulance01SpeedUnit.mph)
