@@ -33,9 +33,25 @@ The intention of these releases due to only being scripts for usage with models 
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ 
 
-NOTE: This currently still uses the Old Input System, so as such depending on
+NOTE: This uses the New Input System, so as such depending on
 what version of Unity you may be using it may be necessary to make sure such
 or both is enabled in project settings.
+
+
+Documentations NOTE: Currently the documentations still need editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime you can ignore parts that mention input customizations in setup steps as such are now removed from scripts even if still mentioned in docs and instead just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
+
+
+For player:
+
+Input Actions:
+
+PlayerControls (Input Action Asset)
+
+For vehicles:
+
+Input Actions:
+
+CarControls (Input Action Asset)
 
 
 Vehicles Currently "Completed" & Included:
