@@ -35,9 +35,36 @@ The intention of these releases due to only being scripts for usage with models 
 
 NOTE: This project was developed while / for using Unity 2021+ & 2022+ & Unity 6
 
+
+Old_Input_System Directory NOTE:
+
 NOTE: This currently still uses the Old Input System, so as such depending on
 what version of Unity you may be using it may be necessary to make sure such
 or both is enabled in project settings.
+
+
+New_Input_System Directory NOTE:
+
+NOTE: This currently uses the New Input System (ie: 21 - 22 variant provided so far), so as such depending on
+what version of Unity you may be using it may be necessary to make sure such
+or both is enabled in project settings.
+
+Documentations NOTE: Currently the documentations still needs editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime you can ignore parts that mention input customizations in setup steps as such are now removed from scripts even if still mentioned in docs and instead just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
+
+
+For player:
+
+Input Actions:
+
+PlayerControls (Input Action Asset)
+
+For vehicles:
+
+Input Actions:
+
+CarControls (Input Action Asset)
+
+
 
 
 Vehicles Currently "Completed" & Included:
@@ -91,7 +118,13 @@ Player Controls:
 New_Input_System:
 
 
-* coming soon...
+* Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Player Left:      A [Keyboard] / Left Stick [Gamepad]
+* Player Right:     D [Keyboard] / Left Stick [Gamepad]
+* Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+* Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+* Player Look:             Delta [Mouse] / Right Stick [Gamepad]
 
 
 Old_Input_System:
@@ -115,7 +148,22 @@ Vehicle Controls:
 New_Input_System:
 
 
-* coming soon...
+
+* Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+* Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+* Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+* Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+* Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad] 
+
+
+Entry Script: 
+
+
+  Note: The following found below are specific only when entry script is applied.
+
+
+* Enter Vehicle:      E [Keyboard] / Button North [Gamepad] 
+* Exit Vehicle:       F [Keyboard] / Button South [Gamepad] 
 
 
 Old_Input_System:  
