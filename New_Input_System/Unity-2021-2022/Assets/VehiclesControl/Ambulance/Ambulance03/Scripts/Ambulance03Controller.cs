@@ -314,7 +314,7 @@ namespace VehiclesControl
 			if (_brakeValue)
 			{
 				// _currentBrakeForce is _brakingForce
-			    _currentBrakeForce = _brakingForce;
+				_currentBrakeForce = _brakingForce;
 				
 			} // close if input _brakeValue
 	        
