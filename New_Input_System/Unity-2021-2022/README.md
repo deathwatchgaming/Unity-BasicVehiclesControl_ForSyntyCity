@@ -23,7 +23,7 @@ Synty City Vehicles (total: 32)
 * Van (total: 4)
 
 
-![Preview](https://raw.githubusercontent.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/refs/heads/main/New_Input_System/Previews/All/PolygonCity-Vehicles.png)
+![Preview](https://raw.githubusercontent.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/refs/heads/main/Previews/All/PolygonCity-Vehicles.png)
 
 
 Release Intentions Note:
