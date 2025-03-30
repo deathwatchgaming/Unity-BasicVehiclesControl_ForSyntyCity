@@ -151,7 +151,7 @@ namespace VehiclesControl
 
 		} // close GameObject FindInActiveObjectByName
 
-        // private void Awake
+		// private void Awake
 		private void Awake()
 		{
 			// _carEnterAction
@@ -222,7 +222,7 @@ namespace VehiclesControl
 		// private void Update
 		private void Update()
 		{
-            // if_carEnterAction triggered
+			// if_carEnterAction triggered
 			if (_carEnterAction.triggered)
 			{
 				// _enterButton is true
