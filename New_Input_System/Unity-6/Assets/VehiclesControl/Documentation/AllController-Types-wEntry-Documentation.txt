@@ -159,10 +159,26 @@ Depth: "1"
 
 Add Tag: "MainCamera"
 
+-----------------------------------------------------------------------------------
+
+Step 7: Add Component: "First Person Controller (Script)"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+Edit:
+
+Input Actions:
+--------------
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -170,16 +186,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -2230,6 +2236,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 63: Add to: Van01Camera (Van01Camera.cs)
@@ -2295,6 +2307,12 @@ Center: X: 0.0337528 Y: 1.13583 Z: 0.5275713
 Size: X: 4.182933 Y: 1.783154 Z: 1.583635
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 65: In Vehicles > Van01 attach script: (Van01Speedometer.cs)
@@ -2337,6 +2355,13 @@ Van01Speedometer
 Van01_SpeedoGuage
 Van01_SpeedoNeedle
 Van01_SpeedText
+
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2681,6 +2706,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 73: Add to: Ambulance01Camera (AmbulanceCamera.cs)
@@ -2746,6 +2777,12 @@ Center: X: -0.02588272 Y: 1.170907 Z: 0.6957448
 Size: X: 3.680509 Y: 1.350671 Z: 1.133414
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 75: In Vehicles > Ambulance01 attach script: (Ambulance01Speedometer.cs)
@@ -2788,6 +2825,12 @@ Ambulance01Speedometer
 Ambulance01_SpeedoGuage
 Ambulance01_SpeedoNeedle
 Ambulance01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3158,6 +3201,12 @@ In Rigidbody:
 Set Rigibody Mass: 2000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 83: Add to: PoliceCruiser01Camera (PoliceCruiser01Camera.cs)
@@ -3223,6 +3272,11 @@ Center: X: 7.069111e-05 Y: 0.8778306 Z: 0.06783819
 Size: X: 4.13833 Y: 1.140519 Z: 1.890623
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
 
 -----------------------------------------------------------------------------------
 
@@ -3266,6 +3320,13 @@ PoliceCruiser01Speedometer
 PoliceCruiser01_SpeedoGuage
 PoliceCruiser01_SpeedoNeedle
 PoliceCruiser01_SpeedText
+
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3656,6 +3717,12 @@ In Rigidbody:
 Set Rigibody Mass: 2000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 93: Add to: Taxi01Camera (Taxi01Camera.cs)
@@ -3721,6 +3788,12 @@ Center: X: 0.01966846 Y: 0.8370438 Z: 0.1993054
 Size: X: 4.086726 Y: 1.221893 Z: 1.730902
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 95: In Vehicle > Taxi01 attach script: (Taxi01Speedometer.cs)
@@ -3762,6 +3835,12 @@ Taxi01Speedometer
 Taxi01_SpeedoGuage
 Taxi01_SpeedoNeedle
 Taxi01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4177,6 +4256,12 @@ In Rigidbody:
 Set Rigibody Mass: 2000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 103: Add to: SedanLarge01Camera (SedanLarge01Camera.cs)
@@ -4242,6 +4327,12 @@ Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
 Size: X: 4.003421 Y: 1.174145 Z: 1.925263
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 105: In Vehicles > SedanLarge01 attach script: (SedanLarge01Speedometer.cs)
@@ -4284,6 +4375,12 @@ SedanLarge01Speedometer
 SedanLarge01_SpeedoGuage
 SedanLarge01_SpeedoNeedle
 SedanLarge01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -4721,6 +4818,12 @@ In Rigidbody:
 Set Rigibody Mass: 2500
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 113: Add to: MuscleCar01Camera (MuscleCar01Camera.cs)
@@ -4786,6 +4889,12 @@ Center: X: -0.05061293 Y: 0.8412467 Z: 0.1511689
 Size: X: 4.224752 Y: 1.08376 Z: 1.720891
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 115: In Vehicles > MuscleCar01 attach script: (MuscleCar01Speedometer.cs)
@@ -4828,6 +4937,13 @@ MuscleCar01Speedometer
 MuscleCar01_SpeedoGuage
 MuscleCar01_SpeedoNeedle
 MuscleCar01_SpeedText
+
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -5289,6 +5405,12 @@ In Rigidbody:
 Set Rigibody Mass: 1500
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 123: Add to: SedanMedium01Camera (SedanMedium01Camera.cs)
@@ -5354,6 +5476,13 @@ Center: X: -0.02273822 Y: 1.064519 Z: 0.03516877
 Size: X: 4.073957 Y: 1.639387 Z: 1.641719
 
 
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 125: In Vehicles > SedanMedium01 attach script: (SedanMedium01Speedometer.cs)
@@ -5395,6 +5524,13 @@ SedanMedium01Speedometer
 SedanMedium01_SpeedoGuage
 SedanMedium01_SpeedoNeedle
 SedanMedium01_SpeedText
+
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -5879,6 +6015,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 133: Add to: SedanSmall01Camera (SedanSmall01Camera.cs)
@@ -5944,6 +6086,12 @@ Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
 Size: X: 3.967898 Y: 1.572915 Z: 1.208247
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 135: In Vehicles > SedanSmall01 attach script: (SedanSmall01Speedometer.cs)
@@ -5985,6 +6133,12 @@ SedanSmall01Speedometer
 SedanSmall01_SpeedoGuage
 SedanSmall01_SpeedoNeedle
 SedanSmall01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
