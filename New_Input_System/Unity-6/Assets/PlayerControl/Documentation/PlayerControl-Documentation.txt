@@ -4,17 +4,22 @@ PlayerControl FirstPersonController (Basic Setup Steps)
 
 Description:
 
-Create a basic Player Controller for your Unity projects.
+Create a basic Player Controller for your Unity projects. * 
+
+* (file is now using New Input system)
+
 
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+
+Look:             Delta [Mouse] / Right Stick [Gamepad]
 
 
 Manual Setup Instruction:
@@ -25,9 +30,10 @@ Manual Setup Instruction:
 Note: if you already have some sort of a test terrain in place, well then, you
 can simple skip the steps: #1, 2 & 3 and go directly to #4.
 
-NOTE: This currently still uses the Old Input System, so as such depending on
-what version of Unity you may be using it may be necessary to make sure such
-or both is enabled in project settings.
+
+Important Note: As this uses the New Input System you must make sure such is
+either already installed and active in your project else you must install
+such from the package manager -> Unity registry -> Input System
 
 
 -----------------------------------------------------------------------------------
@@ -158,7 +164,6 @@ Step 7: Add Component: "First Person Controller (Script)"
 
 Add: "FirstPersonController.cs" script to object: "Player"
 
-
 -----------------------------------------------------------------------------------
 
 Step 8: Edit: the "CharacterController" component:
@@ -191,7 +196,22 @@ Element 3: "Footstep04"
 
 -----------------------------------------------------------------------------------
 
-That is it! You should now be able to run around your scene!
+Step 10: Setup: Define Input Action Asset:
+
+-----------------------------------------------------------------------------------
+
+
+Also in "Player" object edit: the "First Person Controller (Script)"
+
+Input Actions:
+--------------
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+That is it! You should now be able to run around your scene on keyboard or gamepad!
 
 -----------------------------------------------------------------------------------
 
