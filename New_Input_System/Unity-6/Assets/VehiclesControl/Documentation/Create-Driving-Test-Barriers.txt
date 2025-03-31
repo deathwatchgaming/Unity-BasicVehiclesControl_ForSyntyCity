@@ -1,0 +1,281 @@
+Simply create for your vehicle Dev Scene(s): a "Driving Test Barriers"
+----------------------------------------------------------------------
+
+
+Create Empty: "Driving_Test_Barriers"
+
+
+X: 0 Y: 0 Z: 60
+
+
+Creaty Empty: "Traffic_Cones"
+
+X: 0 Y: 0 Z: 0
+
+
+As a child of, "Traffic_Cones", add props:
+
+
+Assets / PolygonCity / Prefabs / Props:
+
+
+SM_Prop_Cone_01
+SM_Prop_Cone_02
+
+
+Make sure to now unpack both of the prefabs completely...
+
+
+Duplicate (x1): SM_Prop_Cone_02
+
+
+Rename as follows:
+
+
+Traffic_Cone_Round_01
+Traffic_Cone_Round_02
+
+
+Edit: Traffic_Cone_Round_01
+
+
+X: -100 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+Edit: Traffic_Cone_Round_02
+
+
+X: 100 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+Duplicate (x9): SM_Prop_Cone_01
+
+
+Rename as follows:
+
+Traffic_Cone_01
+Traffic_Cone_02
+Traffic_Cone_03
+Traffic_Cone_04
+Traffic_Cone_05
+Traffic_Cone_06
+Traffic_Cone_07
+Traffic_Cone_08
+Traffic_Cone_09
+
+
+Edit: Traffic_Cone_01
+
+
+X: -80 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+Edit: Traffic_Cone_02
+
+
+X: -60 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+Edit: Traffic_Cone_03
+
+
+X: -40 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_04
+
+
+X: -20 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_05
+
+
+X: 0 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_06
+
+
+X: 20 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_07
+
+
+X: 40 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_08
+
+
+X: 60 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+
+Edit: Traffic_Cone_09
+
+
+X: 80 Y: 0 Z: 0
+
+
+Add: Rigidbody
+
+
+Okay, your "Final Heirarchy" should look as follows:
+
+
+- Driving_Test_Barriers
+-- Traffic_Cones
+--- Traffic_Cone_Round_01
+--- Traffic_Cone_01
+--- Traffic_Cone_02
+--- Traffic_Cone_03
+--- Traffic_Cone_04
+--- Traffic_Cone_05
+--- Traffic_Cone_06
+--- Traffic_Cone_07
+--- Traffic_Cone_08
+--- Traffic_Cone_09
+--- Traffic_Cone_Round_02
+
+
+Another option: Next, add some side barriers
+-------------------------------------------------
+
+
+As child of: "Driving_Test_Barriers"
+
+
+Create Empty: "Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+Then s a child of: "Barriers", create Empty: "Left_Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+As child of "Left_Barriers" add prop:
+
+
+Assets / PolygonCity / Prefabs / Props:
+
+
+SM_Prop_Barrier_01
+
+
+Make sure to now unpack the prefab completely...
+
+Duplicate: (x41)
+
+
+Start:
+
+Barrier_Left_01
+
+X: 100 Y: 0 Z: 10
+
+Add: Rigidbody
+
+
+ie: Duplicate through 01 - 41
+
+setting X: @ 5 apart
+
+
+End:
+
+Barrier_Left_41
+
+X: -100 Y: 0 Z: 10
+
+Add: Rigidbody
+
+
+Then, as a child of: "Barriers", create Empty: "Right_Barriers"
+
+X: 0 Y: 0 Z: 0
+
+
+
+As child of "Right_Barriers" add prop:
+
+
+Assets / PolygonCity / Prefabs / Props:
+
+
+SM_Prop_Barrier_01
+
+
+Make sure to now unpack the prefab completely...
+
+
+Duplicate: (x41)
+
+
+Start:
+
+
+Barrier_Right_01
+
+X: 100 Y: 0 Z: -10
+
+Add: Rigidbody
+
+
+ie: Duplicate through 01 - 41
+
+setting X: @ 5 apart
+
+
+End:
+
+
+Barrier_Right_41
+
+X: -100 Y: 0 Z: -10
+
+Add: Rigidbody
+
+
+Mkay, you should now be able to drive around and weave in an out around the cones trying not to say knock the cones over for example say like in a "driving test".
+
+
+Thats is it! Simple enough, right?! Best of luck!

@@ -1,0 +1,261 @@
+Vehicle Compass Setup (Controller Only)
+--------------------------------------------------------------------------------
+
+
+Manual Setup Instruction:
+-------------------------
+
+
+* Simply follow the instruction for manual setup found below.
+
+
+------------------------------------------------------------------------------------
+
+Step 1: Interface -> Canvas
+
+------------------------------------------------------------------------------------
+
+
+1.A) Inside "Interface", modify UI: -> "Canvas"
+
+Note: You can set your canvas up how you want, that is why I did not comment much 
+      on such. Same goes fo uvRect on things within the UI canvas as that is perhaps 
+      personal prefs and for these instructions one assumed one would just start with 
+      the default middle center such and tweak such from there.
+
+     * Such is up to the end-user and their prefs, but just so noone says I left it 
+     out, so here is just one "Canvas" example:
+
+      UI Scaler: 
+      ----------
+
+      UI Scale Mode: Scale With Screen Size
+      Reference Resolution: X: 1920 Y: 1080
+      Match: 0 (Width)
+      Reference Pixels Per: 1920
+
+      
+1.B) Inside the "Canvas", create a new empty called: "Compass"
+     * Note: This will house all the compass related stuff
+
+1.C) Add / Modify Details for "Compass":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: 357 Y: -229 Z: 0
+Width: 100
+Height: 100     
+
+
+------------------------------------------------------------------------------------
+
+Step 2: Add: Text Mesh Pro Text
+
+------------------------------------------------------------------------------------
+
+
+2.A) Inside "Compass", create a UI: -> "Text Mesh Pro (TMP)" and rename it 
+     to: "Compass_DegreeText" *
+
+     * Layer should also be "UI"
+
+2.B) Add / Modify Details for "Compass_DegreeText":
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 338 Z: 0
+Width: 200
+Height: 200
+
+Text: 360
+Font: LiberationSans SDF
+Material Preset: LiberationSans SDF Material
+Font Style: Bold
+Font Size: 48
+Vertex Color: Hex: #FFFFFF
+Alignment: Center & Top
+Overflow: Overflow
+
+
+------------------------------------------------------------------------------------
+
+Step 3: Add: RawImage 1
+
+------------------------------------------------------------------------------------
+
+
+3.A) Inside "Compass", create a UI: -> RawImage
+
+3.B) Rename the "RawImage" to: "Compass_Background"
+
+3.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 0.875 Y: 1 Z: 1
+
+3.D)Add / Import the actual image to your project: "CompassBackground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+
+ Then select "Apply" to apply the changes.
+
+ 3.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas - Compass -> "Compass_Background"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassBackground.png"
+
+ Color: set "rgba" as follows:
+
+ R: 127
+ G: 127
+ B: 127
+ A: 25     
+
+
+------------------------------------------------------------------------------------
+
+Step 4: Add: RawImage 2
+
+------------------------------------------------------------------------------------
+
+
+4.A) Inside "Compass", create a UI: -> RawImage
+
+4.B) Rename the "RawImage" to: "Compass_Foreground"
+
+4.C) In Inspector Edit the following as follows:
+
+Rect Transform Anchors: middle & center * 
+
+ * default, though you can change as you desire later
+
+Position: X: -357 Y: 486 Z: 0
+Width: 1152
+Height: 77
+Scale: X: 1 Y: 1 Z: 1
+
+4.D) Add / Import the actual image to your project: "CompassForeground.png"
+
+Change the folllowing settings as such:
+
+ Texture Type: Sprite (2D and UI)
+ Texture Shape: 2D
+ Compression: None
+ Wrap Mode: Repeat * 
+
+ * Note: This is very important for compass to rotate / display correctly!
+
+ Then select "Apply" to apply the changes.
+
+ 4.E) Lastly, now we need to add the actual image we just imported.
+
+      So go back into Interface -> Canvas -> Compass -> "Compass_Foreground"
+      via "Inspector" and find: "RawImage"
+
+      Change the folllowing settings as such:
+
+ Texture: "CompassForeground.png"    
+
+
+------------------------------------------------------------------------------------
+
+Step 5: Add: Component / Script: SedanSmall02Compass.cs
+
+------------------------------------------------------------------------------------
+
+
+5.A) Go back to: Interface -> Canvas -> Compass
+     
+     Add component / script: "SedanSmall02Compass.cs"
+
+5.B) Ok, now fill out the related settings:
+
+For -> SedanSmall02Compass (Script):
+---------------------------------------
+
+Script: SedanSmall02Compass.cs
+Compass Foreground: Compass_Foreground (Raw Image)
+Compass Background: Compass_Background (Raw Image)
+SedanSM 02: SedanSmall02 (Transform)
+Compass Direction: Compass_DegreeText (Text Mesh Pro)
+Compass Enabled: Check this 
+
+
+------------------------------------------------------------------------------------
+
+Step 6: Finally, let us simply resize the compass
+
+------------------------------------------------------------------------------------
+
+
+In Interface -> Canvas -> Compass
+
+
+Compass:
+
+Rect Transform
+--------------
+
+Top & Center
+
+Position: X: 357 Y: -516 Z: 0
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Background
+
+
+Compass_Background:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+
+In Interface -> Canvas -> Compass -> Compass_Foreground
+
+
+Compass_Foreground:
+
+
+Rect Transform
+--------------
+
+Width: 1920
+
+
+----------------------------------------------------------------------------------------
+
+
+FINAL NOTE: In your vehicle camera (script) you may need or opt or
+not to adjust some settings to suit your likings more say things like for
+example: Distance, height, field of view, etc, etc... This is entirely up to
+you if you desire to do such or not...
+
+
+----------------------------------------------------------------------------------------
+
+
+Alright, now that is it for that! Simple enough, right?! Best of Luck!
+

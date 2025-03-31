@@ -131,7 +131,7 @@ namespace VehiclesControl
 
 			[Tooltip("The input action asset")]
 			// InputActionAsset _carControls
-		    [SerializeField] private InputActionAsset _carControls;
+			[SerializeField] private InputActionAsset _carControls;
 
 		// InputAction _moveAction
 		private InputAction _moveAction;

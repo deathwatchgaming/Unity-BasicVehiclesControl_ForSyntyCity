@@ -45,9 +45,7 @@ or both is enabled in project settings.
 
 New_Input_System Directory NOTE:
 
-NOTE: This currently uses the New Input System (ie: 21 - 22 variant provided so far), so as such depending on
-what version of Unity you may be using it may be necessary to make sure such
-or both is enabled in project settings.
+NOTE: This currently uses the New Input System (ie: Unity 21 - 22 & Unity 6 variants provided), so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
 Documentations NOTE: Currently the documentations still needs editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime you can ignore parts that mention input customizations in setup steps as such are now removed from scripts even if still mentioned in docs and instead just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
 
@@ -199,7 +197,7 @@ New_Input_System Variant:
 
 
 
-* Unity 6 => Files, ReadMe, docs: coming soon...
+* Unity 6 => Files, ReadMe, docs: https://github.com/deathwatchgaming/Unity-BasicVehiclesControl_ForSyntyCity/blob/main/New_Input_System/Unity-6
 
 
 
