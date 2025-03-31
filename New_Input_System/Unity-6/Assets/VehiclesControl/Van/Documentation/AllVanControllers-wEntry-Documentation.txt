@@ -6,27 +6,30 @@ Description:
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon City Asset.
 
+
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+Enter Vehicle:     E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:      F [Keyboard] / Button South [Gamepad] 
+
 
 Manual Setup Instruction:
 -------------------------
@@ -171,7 +174,22 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+Input Actions:
+--------------
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -179,16 +197,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -690,6 +698,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: Van01Camera (Van01Camera.cs)
@@ -749,6 +763,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0337528 Y: 1.13583 Z: 0.5275713
 Size: X: 4.182933 Y: 1.783154 Z: 1.583635
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -952,6 +972,12 @@ Van01Speedometer
 Van01_SpeedoGuage
 Van01_SpeedoNeedle
 Van01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1412,6 +1438,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 39: Add to: Van02Camera (Van02Camera.cs)
@@ -1471,6 +1503,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0337528 Y: 1.13583 Z: 0.5275713
 Size: X: 4.182933 Y: 1.783154 Z: 1.583635
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1651,6 +1689,12 @@ Van02Speedometer
 Van02_SpeedoGuage
 Van02_SpeedoNeedle
 Van02_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2170,6 +2214,12 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 54: Add to: Van03Camera (Van03Camera.cs)
@@ -2229,6 +2279,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0337528 Y: 1.13583 Z: 0.5275713
 Size: X: 4.182933 Y: 1.783154 Z: 1.583635
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2409,6 +2465,12 @@ Van03Speedometer
 Van03_SpeedoGuage
 Van03_SpeedoNeedle
 Van03_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2987,6 +3049,13 @@ In Rigidbody:
 Set Rigibody Mass: 3000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
+
 -----------------------------------------------------------------------------------
 
 Step 69: Add to: Van04Camera (Van04Camera.cs)
@@ -3046,6 +3115,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0337528 Y: 1.13583 Z: 0.5275713
 Size: X: 4.182933 Y: 1.783154 Z: 1.583635
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3226,6 +3301,13 @@ Van04Speedometer
 Van04_SpeedoGuage
 Van04_SpeedoNeedle
 Van04_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
 
 
 -----------------------------------------------------------------------------------

@@ -38,20 +38,20 @@ what version of Unity you may be using it may be necessary to make sure such
 or both is enabled in project settings.
 
 
-Documentations NOTE: Currently the documentations still need editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime you can ignore parts that mention input customizations in setup steps as such are now removed from scripts even if still mentioned in docs and instead just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
+Documentations NOTE: Currently some of the documentations still needs editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
 
 
 For player:
 
 Input Actions:
 
-PlayerControls (Input Action Asset)
+Player Controls: PlayerControls (Input Action Asset)
 
 For vehicles:
 
 Input Actions:
 
-CarControls (Input Action Asset)
+Car Controls: CarControls (Input Action Asset)
 
 
 Vehicles Currently "Completed" & Included:

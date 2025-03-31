@@ -6,27 +6,31 @@ Description:
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon City Asset.
 
+
 Player Controls:
 ----------------
 
-Player Forward:   W
-Player Reverse:   S
-Player Left:      A
-Player Right:     D
-Player Jump:      Space
-Player Sprint:    Left Shift
+Player Forward:   W [Keyboard] / Left Stick [Gamepad]
+Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Player Left:      A [Keyboard] / Left Stick [Gamepad]
+Player Right:     D [Keyboard] / Left Stick [Gamepad]
+Player Jump:      Space [Keyboard] / Button South [Gamepad] 
+Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
+Player Look:      Delta [Mouse] / Right Stick [Gamepad]
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
-Enter Vehicle:    E
-Exit Vehicle:     F
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+Enter Vehicle:     E [Keyboard] / Button North [Gamepad] 
+Exit Vehicle:      F [Keyboard] / Button South [Gamepad] 
+
+
 
 Manual Setup Instruction:
 -------------------------
@@ -171,7 +175,23 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Edit: the "CharacterController" component:
+Step 7: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
+
+
+Input Actions:
+--------------
+
+Player Controls: PlayerControls (Input Action Asset)
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -179,16 +199,6 @@ Step 7: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
-
-
------------------------------------------------------------------------------------
-
-Step 8: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -686,6 +696,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: SedanSmall01Camera (SedanSmall01Camera.cs)
@@ -745,6 +761,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
 Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -948,6 +970,12 @@ SedanSmall01Speedometer
 SedanSmall01_SpeedoGuage
 SedanSmall01_SpeedoNeedle
 SedanSmall01_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1395,6 +1423,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 39: Add to: SedanSmall02Camera (SedanSmall02Camera.cs)
@@ -1454,6 +1488,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
 Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -1634,6 +1674,12 @@ SedanSmall02Speedometer
 SedanSmall02_SpeedoGuage
 SedanSmall02_SpeedoNeedle
 SedanSmall02_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2133,6 +2179,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 54: Add to: SedanSmall03Camera (SedanSmall03Camera.cs)
@@ -2192,6 +2244,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
 Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2372,6 +2430,12 @@ SedanSmall03Speedometer
 SedanSmall03_SpeedoGuage
 SedanSmall03_SpeedoNeedle
 SedanSmall03_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -2922,6 +2986,12 @@ In Rigidbody:
 Set Rigibody Mass: 1000
 
 
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 69: Add to: SedanSmall04Camera (SedanSmall04Camera.cs)
@@ -2981,6 +3051,12 @@ Edit Collider: YES!*
 
 Center: X: 0.0231365 Y: 0.9477265 Z: 0.04534858
 Size: X: 3.967898 Y: 1.572915 Z: 1.208247
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
@@ -3161,6 +3237,12 @@ SedanSmall04Speedometer
 SedanSmall04_SpeedoGuage
 SedanSmall04_SpeedoNeedle
 SedanSmall04_SpeedText
+
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
 
 
 -----------------------------------------------------------------------------------
