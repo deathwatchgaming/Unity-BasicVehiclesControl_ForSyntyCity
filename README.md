@@ -47,7 +47,7 @@ New_Input_System Directory NOTE:
 
 NOTE: This currently uses the New Input System (ie: Unity 21 - 22 & Unity 6 variants provided), so as such depending on what version of Unity you may be using it may be necessary to make sure such or both is enabled in project settings.
 
-Documentations NOTE: Currently some of the documentations still needs editing to reflect the changes made for new input variant. So, as such noting that there is a massive amount of docs to edit thus very time consuming so in the meantime just note for now that the input action assets found below should be used in various setup settings. ok, as a temp solution until I get free time to edit all the documentations hopefully this makes sense...
+New_Input_System Directory Documentations NOTE: If there is any confusion with any documentation during setup in regards to "Input Actions", just note the following "Input Action Assets" found below:
 
 
 For player:
@@ -61,7 +61,6 @@ For vehicles:
 Input Actions:
 
 Car Controls: CarControls (Input Action Asset)
-
 
 
 
