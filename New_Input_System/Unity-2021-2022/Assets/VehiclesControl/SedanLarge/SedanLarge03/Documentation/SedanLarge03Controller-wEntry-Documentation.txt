@@ -6,31 +6,27 @@ Description:
 Create a basic Vehicle Controller for your Unity projects using vehicle models
 from Synty Polygon City Asset.
 
-
 Player Controls:
 ----------------
 
-Player Forward:   W [Keyboard] / Left Stick [Gamepad]
-Player Reverse:   S [Keyboard] / Left Stick [Gamepad]
-Player Left:      A [Keyboard] / Left Stick [Gamepad]
-Player Right:     D [Keyboard] / Left Stick [Gamepad]
-Player Jump:      Space [Keyboard] / Button South [Gamepad] 
-Player Sprint:    Shift [Keyboard] / Left Shoulder [Gamepad]
-Player Look:      Delta [Mouse] / Right Stick [Gamepad]
+Player Forward:   W
+Player Reverse:   S
+Player Left:      A
+Player Right:     D
+Player Jump:      Space
+Player Sprint:    Left Shift
 
 
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
-Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
-Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
-Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
-Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
-Enter Vehicle:     E [Keyboard] / Button North [Gamepad] 
-Exit Vehicle:      F [Keyboard] / Button South [Gamepad] 
-
-
+Vehicle Forward:  W
+Vehicle Reverse:  S
+Turn Left:        A
+Turn Right:       D
+Apply Brake:      Space
+Enter Vehicle:    E
+Exit Vehicle:     F
 
 Manual Setup Instruction:
 -------------------------
@@ -166,23 +162,7 @@ Add Tag: "MainCamera"
 
 -----------------------------------------------------------------------------------
 
-Step 7: Add Component: "First Person Controller (Script)"
-
------------------------------------------------------------------------------------
-
-
-Add: "FirstPersonController.cs" script to object: "Player"
-
-
-Input Actions:
---------------
-
-Player Controls: PlayerControls (Input Action Asset)
-
-
------------------------------------------------------------------------------------
-
-Step 8: Edit: the "CharacterController" component:
+Step 7: Edit: the "CharacterController" component:
 
 -----------------------------------------------------------------------------------
 
@@ -190,6 +170,16 @@ Step 8: Edit: the "CharacterController" component:
 In "Player" object, edit the "CharacterController" component:
 
 Height: "1.8"
+
+
+-----------------------------------------------------------------------------------
+
+Step 8: Add Component: "First Person Controller (Script)"
+
+-----------------------------------------------------------------------------------
+
+
+Add: "FirstPersonController.cs" script to object: "Player"
 
 
 -----------------------------------------------------------------------------------
@@ -689,12 +679,6 @@ In Rigidbody:
 Set Rigibody Mass: 2000
 
 
-Input Actions:
---------------
-
-Car Controls: CarControls (Input Action Asset)
-
-
 -----------------------------------------------------------------------------------
 
 Step 23: Add to: SedanLarge03Camera (SedanLarge03Camera.cs)
@@ -756,24 +740,15 @@ Center: X: -0.001805723 Y: 0.8131697 Z: 0.1403447
 Size: X: 4.003421 Y: 1.174145 Z: 1.925263
 
 
-Input Actions:
---------------
-
-Car Controls: CarControls (Input Action Asset)
-
-
 -----------------------------------------------------------------------------------
 
-Note: The next step would be to now follow the provided scene with entry
-speedometer setup steps.
 
-Lastly, you need to next follow the Player and Vehicle Compass setup steps to
-finalize the setup steps!
+Ok, hopefully I covered everything. You should now be able to run around your
+scene with your player and then enter / exit and drive your vehicle around. 
 
-Ok, hopefully I covered everything. After completion of those steps you should
-then be able to run around your scene with your player and then enter / exit
-and drive your vehicle around and see your direction by player and vehicle
-compass.
+Note: The next and last step would be to now follow the provided scene with
+entry speedometer setup steps to finalize all setups steps.
+
 
 -----------------------------------------------------------------------------------
 
