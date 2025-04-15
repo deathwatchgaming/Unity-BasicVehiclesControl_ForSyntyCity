@@ -9,11 +9,12 @@ from Synty Polygon City Asset.
 Vehicle Controls: 
 -----------------
 
-Vehicle Forward:  W
-Vehicle Reverse:  S
-Turn Left:        A
-Turn Right:       D
-Apply Brake:      Space
+Vehicle Forward:   W [Keyboard] / Left Stick [Gamepad]
+Vehicle Reverse:   S [Keyboard] / Left Stick [Gamepad]
+Vehicle Left:      A [Keyboard] / Left Stick [Gamepad]
+Vehicle Right:     D [Keyboard] / Left Stick [Gamepad]
+Vehicle Brake:     Space [Keyboard] / Right Trigger [Gamepad]
+
 
 Manual Setup Instruction:
 -------------------------
@@ -465,6 +466,13 @@ In Rigidbody:
 
 Set Rigibody Mass: 2000
 
+
+Input Actions:
+--------------
+
+Car Controls: CarControls (Input Action Asset)
+
+
 -----------------------------------------------------------------------------------
 
 Step 13: Add to: SedanLarge03Camera (SedanLarge03Camera.cs)
@@ -502,7 +510,22 @@ the documentation folder ie:
 
 SedanLarge03Controller-Only-Speedometer-Documentation 
 
-to finalize all setups steps  
+to finalize all setups steps.  
+
+
+-----------------------------------------------------------------------------------
+
+Optional: (Controller only) Compass Usage
+
+-----------------------------------------------------------------------------------
+
+
+Note: Lastly, if you would like to have the compass for controller only usage
+you need to next follow the Vehicle Compass (Controller Only) setup steps to
+finalize that part of the setup steps found via the NavigationControl
+specific vehicle directory documentation folder ie:
+
+SedanLarge03-Controller-Only-Compass-Documentation
 
 
 -----------------------------------------------------------------------------------
